@@ -1,1 +1,183 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dracula (&:where(.dracula, .dracula *));
+@custom-variant nord (&:where(.nord, .nord *));
+@custom-variant monokai (&:where(.monokai, .monokai *));
+@custom-variant solarized-dark (&:where(.solarized-dark, .solarized-dark *));
+@custom-variant solarized-light (&:where(.solarized-light, .solarized-light *));
+@custom-variant github (&:where(.github, .github *));
+@custom-variant github-dark (&:where(.github-dark, .github-dark *));
+@custom-variant one-dark (&:where(.one-dark, .one-dark *));
+@custom-variant material (&:where(.material, .material *));
+@custom-variant high-contrast (&:where(.high-contrast, .high-contrast *));
+@custom-variant sepia (&:where(.sepia, .sepia *));
+@custom-variant synthwave (&:where(.synthwave, .synthwave *));
+@custom-variant forest (&:where(.forest, .forest *));
+@custom-variant ocean (&:where(.ocean, .ocean *));
+
+@theme {
+    --color-primary: #DC5A2C;
+}
+
+@layer base {
+    /* Light Theme (Default) */
+    html {
+        --color-primary: #DC5A2C;
+        --color-secondary: #2563EB;
+        --color-background: #FFFFFF;
+        --color-foreground: #1F2937;
+        --color-comment: #6B7280;
+        --color-selection: #DBEAFE;
+    }
+
+    /* Dark Theme */
+    html.dark {
+        --color-primary: #F97316;
+        --color-secondary: #3B82F6;
+        --color-background: #111827;
+        --color-foreground: #F9FAFB;
+        --color-comment: #9CA3AF;
+        --color-selection: #1E3A8A;
+    }
+
+    /* Dracula Theme */
+    html.dracula {
+        --color-primary: #FF79C6;
+        --color-secondary: #8BE9FD;
+        --color-background: #282A36;
+        --color-foreground: #F8F8F2;
+        --color-comment: #6272A4;
+        --color-selection: #44475A;
+    }
+
+    /* Nord Theme */
+    html.nord {
+        --color-primary: #88C0D0;
+        --color-secondary: #81A1C1;
+        --color-background: #2E3440;
+        --color-foreground: #ECEFF4;
+        --color-comment: #616E88;
+        --color-selection: #3B4252;
+    }
+
+    /* Monokai Theme */
+    html.monokai {
+        --color-primary: #F92672;
+        --color-secondary: #A6E22E;
+        --color-background: #272822;
+        --color-foreground: #F8F8F2;
+        --color-comment: #75715E;
+        --color-selection: #49483E;
+    }
+
+    /* Solarized Dark Theme */
+    html.solarized-dark {
+        --color-primary: #268BD2;
+        --color-secondary: #2AA198;
+        --color-background: #002B36;
+        --color-foreground: #839496;
+        --color-comment: #586E75;
+        --color-selection: #073642;
+    }
+
+    /* Solarized Light Theme */
+    html.solarized-light {
+        --color-primary: #268BD2;
+        --color-secondary: #2AA198;
+        --color-background: #FDF6E3;
+        --color-foreground: #657B83;
+        --color-comment: #93A1A1;
+        --color-selection: #EEE8D5;
+    }
+
+    /* GitHub Theme */
+    html.github {
+        --color-primary: #0969DA;
+        --color-secondary: #1F883D;
+        --color-background: #FFFFFF;
+        --color-foreground: #24292F;
+        --color-comment: #656D76;
+        --color-selection: #0969DA20;
+    }
+
+    /* GitHub Dark Theme */
+    html.github-dark {
+        --color-primary: #58A6FF;
+        --color-secondary: #56D364;
+        --color-background: #0D1117;
+        --color-foreground: #F0F6FC;
+        --color-comment: #8B949E;
+        --color-selection: #264F78;
+    }
+
+    /* One Dark Theme */
+    html.one-dark {
+        --color-primary: #E06C75;
+        --color-secondary: #98C379;
+        --color-background: #282C34;
+        --color-foreground: #ABB2BF;
+        --color-comment: #5C6370;
+        --color-selection: #3E4451;
+    }
+
+    /* Material Theme */
+    html.material {
+        --color-primary: #FF5722;
+        --color-secondary: #4CAF50;
+        --color-background: #263238;
+        --color-foreground: #EEFFFF;
+        --color-comment: #546E7A;
+        --color-selection: #37474F;
+    }
+
+    /* High Contrast Theme */
+    html.high-contrast {
+        --color-primary: #FFFF00;
+        --color-secondary: #00FFFF;
+        --color-background: #000000;
+        --color-foreground: #FFFFFF;
+        --color-comment: #AAAAAA;
+        --color-selection: #0078D4;
+    }
+
+    /* Sepia Theme */
+    html.sepia {
+        --color-primary: #8B4513;
+        --color-secondary: #D2691E;
+        --color-background: #F5F5DC;
+        --color-foreground: #5D4037;
+        --color-comment: #8D6E63;
+        --color-selection: #DEB887;
+    }
+
+    /* Synthwave Theme */
+    html.synthwave {
+        --color-primary: #FF6B9D;
+        --color-secondary: #00F5FF;
+        --color-background: #2A0E61;
+        --color-foreground: #FFFFFF;
+        --color-comment: #B877DB;
+        --color-selection: #4A1B7A;
+    }
+
+    /* Forest Theme */
+    html.forest {
+        --color-primary: #4CAF50;
+        --color-secondary: #8BC34A;
+        --color-background: #1B5E20;
+        --color-foreground: #E8F5E8;
+        --color-comment: #66BB6A;
+        --color-selection: #2E7D32;
+    }
+
+    /* Ocean Theme */
+    html.ocean {
+        --color-primary: #0EA5E9;
+        --color-secondary: #06B6D4;
+        --color-background: #0C4A6E;
+        --color-foreground: #E0F7FA;
+        --color-comment: #4DD0E1;
+        --color-selection: #0369A1;
+    }
+}
