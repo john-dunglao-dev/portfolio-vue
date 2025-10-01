@@ -6,5 +6,10 @@ export default <RouteRecordRaw[]>[
     path: '',
     name: 'Landing',
     component: () => import('@/views/LandingView.vue'),
-  }
+  },
+  {
+    path: '/about-me',
+    name: 'AboutMe',
+    component: () => import('@/views/AboutMeView.vue'),
+  },
 ];
