@@ -1,22 +1,7 @@
 <script setup lang="ts">
 import MyLogoMini from '@/components/icons/MyLogoMini.vue';
-import { Switch } from '@headlessui/vue';
-import { useColorMode, useCycleList, useDark } from '@vueuse/core';
-import { computed, watchEffect } from 'vue';
-import { Theme } from '@/components/layouts/models/Theme';
+import ThemeChangeButton from '@/components/customized/ThemeChangeButton.vue';
 
-
-// TODO: implement other themes later
-const mode = useColorMode({
-  emitAuto: true,
-  initialValue: useDark() ? Theme.DARK : Theme.LIGHT,
-  modes: {
-    dracula: Theme.DRACULA,
-  }
-});
-
-const { state, next } = useCycleList([Theme.LIGHT, Theme.DARK, Theme.DRACULA, Theme.AUTO]);
-watchEffect(() => mode.value = state.value);
 </script>
 
 <template>
@@ -28,19 +13,14 @@ watchEffect(() => mode.value = state.value);
       </div>
       <nav class="flex items-center gap-2">
         <ul class="flex space-x-4">
-          <li><a href="#" class="text-gray-700 hover:text-gray-900">Home</a></li>
-          <li><a href="#" class="text-gray-700 hover:text-gray-900">About</a></li>
+          <li><RouterLink :to="{ name: 'Landing' }" class="text-gray-700 hover:text-gray-900">Home</RouterLink></li>
+          <li><RouterLink :to="{ name: 'AboutMe' }" class="text-gray-700 hover:text-gray-900">About</RouterLink></li>
           <li><a href="#" class="text-gray-700 hover:text-gray-900">Contact</a></li>
         </ul>
 
         <ul>
           <li>
-            <button @click="next()">
-              <span v-if="state === Theme.LIGHT">🌙</span>
-              <span v-if="state === Theme.DARK">☀️</span>
-              <span v-if="state === Theme.DRACULA">🧛‍♂️</span>
-              <span v-if="state === Theme.AUTO">🔄</span>
-            </button>
+            <ThemeChangeButton />
           </li>
         </ul>
       </nav>
