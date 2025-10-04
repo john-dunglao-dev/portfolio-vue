@@ -56,7 +56,7 @@ const openModal = () => modal.value?.show();
             </div>
 
             <div class="text-lg text-center">
-              {{ skill }}
+              <span>{{ skill }}</span>
             </div>
           </BorderCard>
         </li>

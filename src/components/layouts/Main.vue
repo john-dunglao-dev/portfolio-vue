@@ -4,7 +4,8 @@ import Footer from '@/components/layouts/Footer.vue'
 </script>
 
 <template>
-  <div class="h-lvh max-h-lvh max-w-full">
+  <!-- remove overflow-scroll after implementing the planned layout -->
+  <div class="h-lvh max-h-lvh max-w-full overflow-scroll bg-background">
     <div class="sticky top-0 z-50">
       <Header />
     </div>

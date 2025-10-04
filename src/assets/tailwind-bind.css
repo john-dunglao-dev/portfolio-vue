@@ -16,21 +16,20 @@
 @custom-variant forest (&:where(.forest, .forest *));
 @custom-variant ocean (&:where(.ocean, .ocean *));
 
+/* Light Theme (Default) */
+/**
+ * Note that the default theme colors are defined here. We can override these in the html selector for different themes.
+ */
 @theme {
     --color-primary: #DC5A2C;
+    --color-secondary: #2563EB;
+    --color-background: #FFFFFF;
+    --color-foreground: #1F2937;
+    --color-comment: #6B7280;
+    --color-selection: #DBEAFE;
 }
 
 @layer base {
-    /* Light Theme (Default) */
-    html {
-        --color-primary: #DC5A2C;
-        --color-secondary: #2563EB;
-        --color-background: #FFFFFF;
-        --color-foreground: #1F2937;
-        --color-comment: #6B7280;
-        --color-selection: #DBEAFE;
-    }
-
     /* Dark Theme */
     html.dark {
         --color-primary: #F97316;
@@ -183,5 +182,28 @@
 
     * {
         list-style-type: none; /* Remove default list styles */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-primary);
+    }
+
+    p, span, div, li, td, th, label, input, textarea, button {
+        color: var(--color-foreground);
+    }
+
+    a {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+
+    em, i, strong, b {
+        color: var(--color-primary);
+    }
+
+    ::selection {
+        background-color: var(--color-selection);
+        color: var(--color-foreground);
+        text-shadow: none;
     }
 }
