@@ -180,4 +180,8 @@
         --color-comment: #4DD0E1;
         --color-selection: #0369A1;
     }
+
+    * {
+        list-style-type: none; /* Remove default list styles */
+    }
 }
