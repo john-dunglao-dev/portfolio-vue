@@ -186,10 +186,14 @@
 
     h1, h2, h3, h4, h5, h6 {
         color: var(--color-primary);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
     }
 
     p, span, div, li, td, th, label, input, textarea, button {
         color: var(--color-foreground);
+        font-family: Menlo, Monaco, 'Courier New', monospace;
     }
 
     a {
