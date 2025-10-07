@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from '@/components/layouts/Header.vue'
 import Footer from '@/components/layouts/Footer.vue'
+import FadeTransition from '@/components/transitions/FadeTransition.vue';
 </script>
 
 <template>
@@ -11,7 +12,11 @@ import Footer from '@/components/layouts/Footer.vue'
     </div>
 
     <main class="container mx-auto min-h-[calc(100lvh-64px-24px)]">
-      <RouterView />
+      <RouterView v-slot="{ Component, route }">
+        <FadeTransition>
+          <Component :is="Component" :key="route.path" />
+        </FadeTransition>
+      </RouterView>
     </main>
     
     <div class="sticky bottom-0">
