@@ -50,21 +50,22 @@ const openModal = () => modal.value?.show();
 
       <GridBox as="ul">
         <li v-for="(icon, skill) in group.skills" :key="skill">
-          <BorderCard class="grid grid-cols-2 md:grid-cols-1 gap-2 place-items-center py-3 h-full">
-            <div class="h-10">
-              <i :class="icon" class="text-[32px]"></i>
-            </div>
-
-            <div class="text-lg text-center">
-              <span>{{ skill }}</span>
-            </div>
-          </BorderCard>
+          <button class="block w-full h-full" @click="openModal">
+            <BorderCard class="grid grid-cols-2 md:grid-cols-1 gap-2 place-items-center py-3 h-full">
+              <div class="h-10">
+                <i :class="icon" class="text-[32px]"></i>
+              </div>
+  
+              <div class="text-lg text-center">
+                <span>{{ skill }}</span>
+              </div>
+            </BorderCard>
+          </button>
         </li>
       </GridBox>
     </CaptionedBox>
 
-
-    <button @click="openModal">Open Modal</button>
+    <!-- TODO: Add handler to open modal with skill details -->
     <VDialog ref="modal"></VDialog>
   </div>
 </template>
