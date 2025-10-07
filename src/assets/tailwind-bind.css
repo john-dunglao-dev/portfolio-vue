@@ -27,6 +27,7 @@
     --color-foreground: #1F2937;
     --color-comment: #6B7280;
     --color-selection: #DBEAFE;
+    --default-font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 
 @layer base {
@@ -188,12 +189,11 @@
         color: var(--color-primary);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-transform: uppercase;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.075rem;
     }
 
     p, span, div, li, td, th, label, input, textarea, button {
         color: var(--color-foreground);
-        font-family: Menlo, Monaco, 'Courier New', monospace;
     }
 
     a {
@@ -209,5 +209,9 @@
         background-color: var(--color-selection);
         color: var(--color-foreground);
         text-shadow: none;
+    }
+
+    button {
+        cursor: pointer;
     }
 }
