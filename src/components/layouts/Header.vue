@@ -27,7 +27,7 @@ import { PhList } from '@phosphor-icons/vue';
         <ul class="flex space-x-4">
           <li><RouterLink :to="{ name: 'Landing' }" class="text-gray-700 hover:text-gray-900">Home</RouterLink></li>
           <li><RouterLink :to="{ name: 'AboutMe' }" class="text-gray-700 hover:text-gray-900">About</RouterLink></li>
-          <li><a href="#" class="text-gray-700 hover:text-gray-900">Contact</a></li>
+          <li><RouterLink :to="{ name: 'ContactMe' }" class="text-gray-700 hover:text-gray-900">Contact</RouterLink></li>
         </ul>
 
         <ul>

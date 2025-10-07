@@ -12,4 +12,9 @@ export default <RouteRecordRaw[]>[
     name: 'AboutMe',
     component: () => import('@/views/AboutMeView.vue'),
   },
+  {
+    path: '/contact-me',
+    name: 'ContactMe',
+    component: () => import('@/views/ContactMeView.vue'),
+  },
 ];
