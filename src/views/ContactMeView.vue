@@ -2,10 +2,10 @@
 </script>
 
 <template>
-  <div>
-    <div class="prose prose-slate max-w-none">
-      <h1>Contact Me</h1>
-      <p>
+  <div class="mt-6">
+    <div>
+      <h1 class="text-3xl">Contact Me</h1>
+      <p class="mb-4">
         Feel free to reach out to me through any of the following platforms:
       </p>
   
@@ -22,7 +22,7 @@
       </ul>
     </div>
 
-    <p class="mb-4">Or use this form to reach out</p>
+    <p class="my-4">Or use this form to reach out</p>
 
     <div>
       <form class="space-y-4">
