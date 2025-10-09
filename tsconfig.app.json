@@ -6,10 +6,7 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
     "paths": {
-      "@dynamicRoute": [
-        "./src/router/dev",
-        "./src/router/prod",
-      ],
+      "@dynamicRoute": ["./src/router/dev", "./src/router/prod"],
       "@/*": ["./src/*"]
     }
   }

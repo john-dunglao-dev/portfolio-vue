@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import MyLogoMini from '@/components/icons/MyLogoMini.vue';
-import ThemeChangeButton from '@/components/buttons/ThemeChangeButton.vue';
-import { PhList } from '@phosphor-icons/vue';
-
+import { PhList } from "@phosphor-icons/vue";
+import ThemeChangeButton from "@/components/buttons/ThemeChangeButton.vue";
+import MyLogoMini from "@/components/icons/MyLogoMini.vue";
 </script>
 
 <template>

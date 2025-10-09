@@ -1,29 +1,34 @@
 <script setup lang="ts">
-import CaptionedBox from '@/components/boxes/CaptionedBox.vue';
-import GridBox from '@/components/boxes/GridBox.vue';
-import BorderCard from '@/components/cards/BorderCard.vue';
-import VDialog from '@/components/modals/VDialog.vue';
-import { backendIcons, databaseIcons, devopsIcons, frontendIcons } from '@/components/portfolio/models/Skill';
-import { ref } from 'vue';
+import { ref } from "vue";
+import CaptionedBox from "@/components/boxes/CaptionedBox.vue";
+import GridBox from "@/components/boxes/GridBox.vue";
+import BorderCard from "@/components/cards/BorderCard.vue";
+import type VDialog from "@/components/modals/VDialog.vue";
+import {
+  backendIcons,
+  databaseIcons,
+  devopsIcons,
+  frontendIcons,
+} from "@/components/portfolio/models/Skill";
 
 const ALL_SKILLS = [
   {
-    legend: 'Frontend Skills',
-    skills: frontendIcons
+    legend: "Frontend Skills",
+    skills: frontendIcons,
   },
   {
-    legend: 'Backend Skills',
-    skills: backendIcons
+    legend: "Backend Skills",
+    skills: backendIcons,
   },
   {
-    legend: 'Database Skills',
-    skills: databaseIcons
+    legend: "Database Skills",
+    skills: databaseIcons,
   },
   {
-    legend: 'DevOps Skills',
-    skills: devopsIcons
+    legend: "DevOps Skills",
+    skills: devopsIcons,
   },
-]
+];
 
 const modal = ref<InstanceType<typeof VDialog>>();
 

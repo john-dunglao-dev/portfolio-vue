@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import MyLogo from '@/components/icons/MyLogo.vue'
-import { ref, onMounted, nextTick } from 'vue'
+import { nextTick, onMounted, ref } from "vue";
+import MyLogo from "@/components/icons/MyLogo.vue";
 
-const isVisible = ref(false)
+const isVisible = ref(false);
 
 onMounted(async () => {
-  await nextTick()
-  isVisible.value = true
-})
+  await nextTick();
+  isVisible.value = true;
+});
 </script>
 
 <template>

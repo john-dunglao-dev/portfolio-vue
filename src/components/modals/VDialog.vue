@@ -1,22 +1,21 @@
 <script setup lang="ts">
-import { PhX } from '@phosphor-icons/vue';
-import { ref } from 'vue';
-
+import { PhX } from "@phosphor-icons/vue";
+import { ref } from "vue";
 
 const dialogRef = ref<HTMLDialogElement | null>(null);
 
 const show = () => {
   if (!dialogRef.value) {
-    console.error('[Show Dialog] Referenced dialog is not found');
+    console.error("[Show Dialog] Referenced dialog is not found");
   }
-  
+
   dialogRef.value?.showModal();
 };
 const hide = () => {
   if (!dialogRef.value) {
-    console.error('[Hide Dialog] Referenced dialog is not found');
+    console.error("[Hide Dialog] Referenced dialog is not found");
   }
-  
+
   dialogRef.value?.close();
 };
 

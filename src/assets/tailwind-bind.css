@@ -21,197 +21,214 @@
  * Note that the default theme colors are defined here. We can override these in the html selector for different themes.
  */
 @theme {
-    --color-primary: #DC5A2C;
-    --color-secondary: #2563EB;
-    --color-background: #FFFFFF;
-    --color-foreground: #1F2937;
-    --color-comment: #6B7280;
-    --color-selection: #DBEAFE;
-    --default-font-family: Menlo, Monaco, 'Courier New', monospace;
+  --color-primary: #dc5a2c;
+  --color-secondary: #2563eb;
+  --color-background: #ffffff;
+  --color-foreground: #1f2937;
+  --color-comment: #6b7280;
+  --color-selection: #dbeafe;
+  --default-font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
 @layer base {
-    /* Dark Theme */
-    html.dark {
-        --color-primary: #F97316;
-        --color-secondary: #3B82F6;
-        --color-background: #111827;
-        --color-foreground: #F9FAFB;
-        --color-comment: #9CA3AF;
-        --color-selection: #1E3A8A;
-    }
+  /* Dark Theme */
+  html.dark {
+    --color-primary: #f97316;
+    --color-secondary: #3b82f6;
+    --color-background: #111827;
+    --color-foreground: #f9fafb;
+    --color-comment: #9ca3af;
+    --color-selection: #1e3a8a;
+  }
 
-    /* Dracula Theme */
-    html.dracula {
-        --color-primary: #FF79C6;
-        --color-secondary: #8BE9FD;
-        --color-background: #282A36;
-        --color-foreground: #F8F8F2;
-        --color-comment: #6272A4;
-        --color-selection: #44475A;
-    }
+  /* Dracula Theme */
+  html.dracula {
+    --color-primary: #ff79c6;
+    --color-secondary: #8be9fd;
+    --color-background: #282a36;
+    --color-foreground: #f8f8f2;
+    --color-comment: #6272a4;
+    --color-selection: #44475a;
+  }
 
-    /* Nord Theme */
-    html.nord {
-        --color-primary: #88C0D0;
-        --color-secondary: #81A1C1;
-        --color-background: #2E3440;
-        --color-foreground: #ECEFF4;
-        --color-comment: #616E88;
-        --color-selection: #3B4252;
-    }
+  /* Nord Theme */
+  html.nord {
+    --color-primary: #88c0d0;
+    --color-secondary: #81a1c1;
+    --color-background: #2e3440;
+    --color-foreground: #eceff4;
+    --color-comment: #616e88;
+    --color-selection: #3b4252;
+  }
 
-    /* Monokai Theme */
-    html.monokai {
-        --color-primary: #F92672;
-        --color-secondary: #A6E22E;
-        --color-background: #272822;
-        --color-foreground: #F8F8F2;
-        --color-comment: #75715E;
-        --color-selection: #49483E;
-    }
+  /* Monokai Theme */
+  html.monokai {
+    --color-primary: #f92672;
+    --color-secondary: #a6e22e;
+    --color-background: #272822;
+    --color-foreground: #f8f8f2;
+    --color-comment: #75715e;
+    --color-selection: #49483e;
+  }
 
-    /* Solarized Dark Theme */
-    html.solarized-dark {
-        --color-primary: #268BD2;
-        --color-secondary: #2AA198;
-        --color-background: #002B36;
-        --color-foreground: #839496;
-        --color-comment: #586E75;
-        --color-selection: #073642;
-    }
+  /* Solarized Dark Theme */
+  html.solarized-dark {
+    --color-primary: #268bd2;
+    --color-secondary: #2aa198;
+    --color-background: #002b36;
+    --color-foreground: #839496;
+    --color-comment: #586e75;
+    --color-selection: #073642;
+  }
 
-    /* Solarized Light Theme */
-    html.solarized-light {
-        --color-primary: #268BD2;
-        --color-secondary: #2AA198;
-        --color-background: #FDF6E3;
-        --color-foreground: #657B83;
-        --color-comment: #93A1A1;
-        --color-selection: #EEE8D5;
-    }
+  /* Solarized Light Theme */
+  html.solarized-light {
+    --color-primary: #268bd2;
+    --color-secondary: #2aa198;
+    --color-background: #fdf6e3;
+    --color-foreground: #657b83;
+    --color-comment: #93a1a1;
+    --color-selection: #eee8d5;
+  }
 
-    /* GitHub Theme */
-    html.github {
-        --color-primary: #0969DA;
-        --color-secondary: #1F883D;
-        --color-background: #FFFFFF;
-        --color-foreground: #24292F;
-        --color-comment: #656D76;
-        --color-selection: #0969DA20;
-    }
+  /* GitHub Theme */
+  html.github {
+    --color-primary: #0969da;
+    --color-secondary: #1f883d;
+    --color-background: #ffffff;
+    --color-foreground: #24292f;
+    --color-comment: #656d76;
+    --color-selection: #0969da20;
+  }
 
-    /* GitHub Dark Theme */
-    html.github-dark {
-        --color-primary: #58A6FF;
-        --color-secondary: #56D364;
-        --color-background: #0D1117;
-        --color-foreground: #F0F6FC;
-        --color-comment: #8B949E;
-        --color-selection: #264F78;
-    }
+  /* GitHub Dark Theme */
+  html.github-dark {
+    --color-primary: #58a6ff;
+    --color-secondary: #56d364;
+    --color-background: #0d1117;
+    --color-foreground: #f0f6fc;
+    --color-comment: #8b949e;
+    --color-selection: #264f78;
+  }
 
-    /* One Dark Theme */
-    html.one-dark {
-        --color-primary: #E06C75;
-        --color-secondary: #98C379;
-        --color-background: #282C34;
-        --color-foreground: #ABB2BF;
-        --color-comment: #5C6370;
-        --color-selection: #3E4451;
-    }
+  /* One Dark Theme */
+  html.one-dark {
+    --color-primary: #e06c75;
+    --color-secondary: #98c379;
+    --color-background: #282c34;
+    --color-foreground: #abb2bf;
+    --color-comment: #5c6370;
+    --color-selection: #3e4451;
+  }
 
-    /* Material Theme */
-    html.material {
-        --color-primary: #FF5722;
-        --color-secondary: #4CAF50;
-        --color-background: #263238;
-        --color-foreground: #EEFFFF;
-        --color-comment: #546E7A;
-        --color-selection: #37474F;
-    }
+  /* Material Theme */
+  html.material {
+    --color-primary: #ff5722;
+    --color-secondary: #4caf50;
+    --color-background: #263238;
+    --color-foreground: #eeffff;
+    --color-comment: #546e7a;
+    --color-selection: #37474f;
+  }
 
-    /* High Contrast Theme */
-    html.high-contrast {
-        --color-primary: #FFFF00;
-        --color-secondary: #00FFFF;
-        --color-background: #000000;
-        --color-foreground: #FFFFFF;
-        --color-comment: #AAAAAA;
-        --color-selection: #0078D4;
-    }
+  /* High Contrast Theme */
+  html.high-contrast {
+    --color-primary: #ffff00;
+    --color-secondary: #00ffff;
+    --color-background: #000000;
+    --color-foreground: #ffffff;
+    --color-comment: #aaaaaa;
+    --color-selection: #0078d4;
+  }
 
-    /* Sepia Theme */
-    html.sepia {
-        --color-primary: #8B4513;
-        --color-secondary: #D2691E;
-        --color-background: #F5F5DC;
-        --color-foreground: #5D4037;
-        --color-comment: #8D6E63;
-        --color-selection: #DEB887;
-    }
+  /* Sepia Theme */
+  html.sepia {
+    --color-primary: #8b4513;
+    --color-secondary: #d2691e;
+    --color-background: #f5f5dc;
+    --color-foreground: #5d4037;
+    --color-comment: #8d6e63;
+    --color-selection: #deb887;
+  }
 
-    /* Synthwave Theme */
-    html.synthwave {
-        --color-primary: #FF6B9D;
-        --color-secondary: #00F5FF;
-        --color-background: #2A0E61;
-        --color-foreground: #FFFFFF;
-        --color-comment: #B877DB;
-        --color-selection: #4A1B7A;
-    }
+  /* Synthwave Theme */
+  html.synthwave {
+    --color-primary: #ff6b9d;
+    --color-secondary: #00f5ff;
+    --color-background: #2a0e61;
+    --color-foreground: #ffffff;
+    --color-comment: #b877db;
+    --color-selection: #4a1b7a;
+  }
 
-    /* Forest Theme */
-    html.forest {
-        --color-primary: #4CAF50;
-        --color-secondary: #8BC34A;
-        --color-background: #1B5E20;
-        --color-foreground: #E8F5E8;
-        --color-comment: #66BB6A;
-        --color-selection: #2E7D32;
-    }
+  /* Forest Theme */
+  html.forest {
+    --color-primary: #4caf50;
+    --color-secondary: #8bc34a;
+    --color-background: #1b5e20;
+    --color-foreground: #e8f5e8;
+    --color-comment: #66bb6a;
+    --color-selection: #2e7d32;
+  }
 
-    /* Ocean Theme */
-    html.ocean {
-        --color-primary: #0EA5E9;
-        --color-secondary: #06B6D4;
-        --color-background: #0C4A6E;
-        --color-foreground: #E0F7FA;
-        --color-comment: #4DD0E1;
-        --color-selection: #0369A1;
-    }
+  /* Ocean Theme */
+  html.ocean {
+    --color-primary: #0ea5e9;
+    --color-secondary: #06b6d4;
+    --color-background: #0c4a6e;
+    --color-foreground: #e0f7fa;
+    --color-comment: #4dd0e1;
+    --color-selection: #0369a1;
+  }
 
-    * {
-        list-style-type: none; /* Remove default list styles */
-    }
+  * {
+    list-style-type: none; /* Remove default list styles */
+  }
 
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--color-primary);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 0.075rem;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-primary);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.075rem;
+  }
 
-    p, span, div, li, td, th, label, input, textarea, button {
-        color: var(--color-foreground);
-    }
+  p,
+  span,
+  div,
+  li,
+  td,
+  th,
+  label,
+  input,
+  textarea,
+  button {
+    color: var(--color-foreground);
+  }
 
-    a {
-        color: var(--color-secondary);
-        text-decoration: none;
-    }
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+  }
 
-    em, i, strong, b {
-        color: var(--color-primary);
-    }
+  em,
+  i,
+  strong,
+  b {
+    color: var(--color-primary);
+  }
 
-    ::selection {
-        background-color: var(--color-selection);
-        color: var(--color-foreground);
-        text-shadow: none;
-    }
+  ::selection {
+    background-color: var(--color-selection);
+    color: var(--color-foreground);
+    text-shadow: none;
+  }
 
-    button {
-        cursor: pointer;
-    }
+  button {
+    cursor: pointer;
+  }
 }
