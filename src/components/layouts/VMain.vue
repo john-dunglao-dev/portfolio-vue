@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import VFooter from "@/components/layouts/VFooter.vue";
-import VHeader from "@/components/layouts/VHeader.vue";
-import FadeTransition from "@/components/transitions/FadeTransition.vue";
+import VFooter from '@/components/layouts/VFooter.vue'
+import VHeader from '@/components/layouts/VHeader.vue'
+import FadeTransition from '@/components/transitions/FadeTransition.vue'
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import FadeTransition from "@/components/transitions/FadeTransition.vue";
         </FadeTransition>
       </RouterView>
     </main>
-    
+
     <div class="sticky bottom-0">
       <VFooter />
     </div>

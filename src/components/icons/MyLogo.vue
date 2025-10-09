@@ -1,10 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1161"
-    height="531"
-    viewBox="-0.5 -0.5 1161 531"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="1161" height="531" viewBox="-0.5 -0.5 1161 531">
     <g data-cell-id="0">
       <g data-cell-id="1">
         <path

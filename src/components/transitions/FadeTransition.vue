@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <transition 
+    <transition
       name="fade"
       enter-from-class="opacity-0 scale-95 -translate-y-2"
       enter-to-class="opacity-100 scale-100 translate-y-0 absolute top-0 left-0 w-full h-full"

@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <fieldset class="border px-6 pt-3 pb-6 rounded-md">

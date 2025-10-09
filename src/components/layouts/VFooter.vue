@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <footer class="bg-gray-50 dark:bg-gray-400 dracula:bg-gray-800 text-orange-200">

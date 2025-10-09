@@ -1,61 +1,167 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg"
-    style="background: transparent; background-color: transparent; color-scheme: light dark;"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="271px" height="156px" viewBox="-0.5 -0.5 271 156"
-    content="&lt;mxfile host=&quot;app.diagrams.net&quot; agent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36&quot; version=&quot;28.2.5&quot;&gt;&#10;  &lt;diagram name=&quot;Page-1&quot; id=&quot;d6sJR8F2CNlHGJ5HfeV8&quot;&gt;&#10;    &lt;mxGraphModel dx=&quot;1678&quot; dy=&quot;971&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;850&quot; pageHeight=&quot;1100&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#10;      &lt;root&gt;&#10;        &lt;mxCell id=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;bKSkoynfvdSehXPLl7zG-88&quot; value=&quot;&quot; style=&quot;ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=currentColor;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;480&quot; y=&quot;548&quot; width=&quot;80&quot; height=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;bKSkoynfvdSehXPLl7zG-89&quot; value=&quot;&quot; style=&quot;ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=currentColor;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;495&quot; y=&quot;473&quot; width=&quot;50&quot; height=&quot;50&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;bKSkoynfvdSehXPLl7zG-91&quot; value=&quot;&quot; style=&quot;shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=currentColor;strokeColor=#FFFFFF;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;290&quot; y=&quot;548&quot; width=&quot;170&quot; height=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;bKSkoynfvdSehXPLl7zG-93&quot; value=&quot;&quot; style=&quot;shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=currentColor;strokeColor=#FFFFFF;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;370&quot; y=&quot;478&quot; width=&quot;90&quot; height=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;bKSkoynfvdSehXPLl7zG-92&quot; value=&quot;&quot; style=&quot;shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=currentColor;strokeColor=#FFFFFF;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;295&quot; y=&quot;478&quot; width=&quot;85&quot; height=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;      &lt;/root&gt;&#10;    &lt;/mxGraphModel&gt;&#10;  &lt;/diagram&gt;&#10;&lt;/mxfile&gt;&#10;">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    style="background: transparent; background-color: transparent; color-scheme: light dark"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    width="271px"
+    height="156px"
+    viewBox="-0.5 -0.5 271 156"
+    content='&lt;mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5"&gt;&#10;  &lt;diagram name="Page-1" id="d6sJR8F2CNlHGJ5HfeV8"&gt;&#10;    &lt;mxGraphModel dx="1678" dy="971" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0"&gt;&#10;      &lt;root&gt;&#10;        &lt;mxCell id="0" /&gt;&#10;        &lt;mxCell id="1" parent="0" /&gt;&#10;        &lt;mxCell id="bKSkoynfvdSehXPLl7zG-88" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=currentColor;" vertex="1" parent="1"&gt;&#10;          &lt;mxGeometry x="480" y="548" width="80" height="80" as="geometry" /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id="bKSkoynfvdSehXPLl7zG-89" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=currentColor;" vertex="1" parent="1"&gt;&#10;          &lt;mxGeometry x="495" y="473" width="50" height="50" as="geometry" /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id="bKSkoynfvdSehXPLl7zG-91" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=currentColor;strokeColor=#FFFFFF;" vertex="1" parent="1"&gt;&#10;          &lt;mxGeometry x="290" y="548" width="170" height="80" as="geometry" /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id="bKSkoynfvdSehXPLl7zG-93" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=currentColor;strokeColor=#FFFFFF;" vertex="1" parent="1"&gt;&#10;          &lt;mxGeometry x="370" y="478" width="90" height="80" as="geometry" /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id="bKSkoynfvdSehXPLl7zG-92" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=currentColor;strokeColor=#FFFFFF;" vertex="1" parent="1"&gt;&#10;          &lt;mxGeometry x="295" y="478" width="85" height="80" as="geometry" /&gt;&#10;        &lt;/mxCell&gt;&#10;      &lt;/root&gt;&#10;    &lt;/mxGraphModel&gt;&#10;  &lt;/diagram&gt;&#10;&lt;/mxfile&gt;&#10;'
+  >
     <defs />
     <g>
       <g data-cell-id="0">
         <g data-cell-id="1">
           <g data-cell-id="bKSkoynfvdSehXPLl7zG-88">
             <g>
-              <ellipse cx="230" cy="115" rx="40" ry="40" fill="currentColor" stroke="currentColor" pointer-events="all"
-                style="fill: light-dark(currentColor, rgb(237, 237, 237)); stroke: light-dark(currentColor, rgb(255, 255, 255));" />
+              <ellipse
+                cx="230"
+                cy="115"
+                rx="40"
+                ry="40"
+                fill="currentColor"
+                stroke="currentColor"
+                pointer-events="all"
+                style="
+                  fill: light-dark(currentColor, rgb(237, 237, 237));
+                  stroke: light-dark(currentColor, rgb(255, 255, 255));
+                "
+              />
             </g>
           </g>
           <g data-cell-id="bKSkoynfvdSehXPLl7zG-89">
             <g>
-              <ellipse cx="230" cy="25" rx="25" ry="25" fill="currentColor" stroke="currentColor" pointer-events="all"
-                style="fill: light-dark(currentColor, rgb(237, 237, 237)); stroke: light-dark(currentColor, rgb(255, 255, 255));" />
+              <ellipse
+                cx="230"
+                cy="25"
+                rx="25"
+                ry="25"
+                fill="currentColor"
+                stroke="currentColor"
+                pointer-events="all"
+                style="
+                  fill: light-dark(currentColor, rgb(237, 237, 237));
+                  stroke: light-dark(currentColor, rgb(255, 255, 255));
+                "
+              />
             </g>
           </g>
           <g data-cell-id="bKSkoynfvdSehXPLl7zG-91">
             <g>
-              <path d="M 0 75 L 150 75 L 170 95 L 170 155 L 20 155 L 0 135 L 0 75 Z" fill="currentColor" stroke="#ffffff"
-                stroke-miterlimit="10" pointer-events="all"
-                style="fill: light-dark(currentColor, rgb(237, 237, 237)); stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));" />
-              <path d="M 0 75 L 150 75 L 170 95 L 20 95 Z" fill-opacity="0.05" fill="currentColor" stroke="none"
-                pointer-events="all" style="fill: light-dark(currentColor, rgb(237, 237, 237));" />
-              <path d="M 0 75 L 20 95 L 20 155 L 0 135 Z" fill-opacity="0.1" fill="currentColor" stroke="none"
-                pointer-events="all" style="fill: light-dark(currentColor, rgb(237, 237, 237));" />
-              <path d="M 20 155 L 20 95 L 0 75 M 20 95 L 170 95" fill="none" stroke="#ffffff" stroke-miterlimit="10"
-                pointer-events="all" style="stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));" />
+              <path
+                d="M 0 75 L 150 75 L 170 95 L 170 155 L 20 155 L 0 135 L 0 75 Z"
+                fill="currentColor"
+                stroke="#ffffff"
+                stroke-miterlimit="10"
+                pointer-events="all"
+                style="
+                  fill: light-dark(currentColor, rgb(237, 237, 237));
+                  stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));
+                "
+              />
+              <path
+                d="M 0 75 L 150 75 L 170 95 L 20 95 Z"
+                fill-opacity="0.05"
+                fill="currentColor"
+                stroke="none"
+                pointer-events="all"
+                style="fill: light-dark(currentColor, rgb(237, 237, 237))"
+              />
+              <path
+                d="M 0 75 L 20 95 L 20 155 L 0 135 Z"
+                fill-opacity="0.1"
+                fill="currentColor"
+                stroke="none"
+                pointer-events="all"
+                style="fill: light-dark(currentColor, rgb(237, 237, 237))"
+              />
+              <path
+                d="M 20 155 L 20 95 L 0 75 M 20 95 L 170 95"
+                fill="none"
+                stroke="#ffffff"
+                stroke-miterlimit="10"
+                pointer-events="all"
+                style="stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18))"
+              />
             </g>
           </g>
           <g data-cell-id="bKSkoynfvdSehXPLl7zG-93">
             <g>
-              <path d="M 80 5 L 150 5 L 170 25 L 170 85 L 100 85 L 80 65 L 80 5 Z" fill="currentColor" stroke="#ffffff"
-                stroke-miterlimit="10" pointer-events="all"
-                style="fill: light-dark(currentColor, rgb(237, 237, 237)); stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));" />
-              <path d="M 80 5 L 150 5 L 170 25 L 100 25 Z" fill-opacity="0.05" fill="currentColor" stroke="none"
-                pointer-events="all" style="fill: light-dark(currentColor, rgb(237, 237, 237));" />
-              <path d="M 80 5 L 100 25 L 100 85 L 80 65 Z" fill-opacity="0.1" fill="currentColor" stroke="none"
-                pointer-events="all" style="fill: light-dark(currentColor, rgb(237, 237, 237));" />
-              <path d="M 100 85 L 100 25 L 80 5 M 100 25 L 170 25" fill="none" stroke="#ffffff" stroke-miterlimit="10"
-                pointer-events="all" style="stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));" />
+              <path
+                d="M 80 5 L 150 5 L 170 25 L 170 85 L 100 85 L 80 65 L 80 5 Z"
+                fill="currentColor"
+                stroke="#ffffff"
+                stroke-miterlimit="10"
+                pointer-events="all"
+                style="
+                  fill: light-dark(currentColor, rgb(237, 237, 237));
+                  stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));
+                "
+              />
+              <path
+                d="M 80 5 L 150 5 L 170 25 L 100 25 Z"
+                fill-opacity="0.05"
+                fill="currentColor"
+                stroke="none"
+                pointer-events="all"
+                style="fill: light-dark(currentColor, rgb(237, 237, 237))"
+              />
+              <path
+                d="M 80 5 L 100 25 L 100 85 L 80 65 Z"
+                fill-opacity="0.1"
+                fill="currentColor"
+                stroke="none"
+                pointer-events="all"
+                style="fill: light-dark(currentColor, rgb(237, 237, 237))"
+              />
+              <path
+                d="M 100 85 L 100 25 L 80 5 M 100 25 L 170 25"
+                fill="none"
+                stroke="#ffffff"
+                stroke-miterlimit="10"
+                pointer-events="all"
+                style="stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18))"
+              />
             </g>
           </g>
           <g data-cell-id="bKSkoynfvdSehXPLl7zG-92">
             <g>
-              <path d="M 5 5 L 70 5 L 90 25 L 90 85 L 25 85 L 5 65 L 5 5 Z" fill="currentColor" stroke="#ffffff"
-                stroke-miterlimit="10" pointer-events="all"
-                style="fill: light-dark(currentColor, rgb(237, 237, 237)); stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));" />
-              <path d="M 5 5 L 70 5 L 90 25 L 25 25 Z" fill-opacity="0.05" fill="currentColor" stroke="none"
-                pointer-events="all" style="fill: light-dark(currentColor, rgb(237, 237, 237));" />
-              <path d="M 5 5 L 25 25 L 25 85 L 5 65 Z" fill-opacity="0.1" fill="currentColor" stroke="none"
-                pointer-events="all" style="fill: light-dark(currentColor, rgb(237, 237, 237));" />
-              <path d="M 25 85 L 25 25 L 5 5 M 25 25 L 90 25" fill="none" stroke="#ffffff" stroke-miterlimit="10"
-                pointer-events="all" style="stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));" />
+              <path
+                d="M 5 5 L 70 5 L 90 25 L 90 85 L 25 85 L 5 65 L 5 5 Z"
+                fill="currentColor"
+                stroke="#ffffff"
+                stroke-miterlimit="10"
+                pointer-events="all"
+                style="
+                  fill: light-dark(currentColor, rgb(237, 237, 237));
+                  stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));
+                "
+              />
+              <path
+                d="M 5 5 L 70 5 L 90 25 L 25 25 Z"
+                fill-opacity="0.05"
+                fill="currentColor"
+                stroke="none"
+                pointer-events="all"
+                style="fill: light-dark(currentColor, rgb(237, 237, 237))"
+              />
+              <path
+                d="M 5 5 L 25 25 L 25 85 L 5 65 Z"
+                fill-opacity="0.1"
+                fill="currentColor"
+                stroke="none"
+                pointer-events="all"
+                style="fill: light-dark(currentColor, rgb(237, 237, 237))"
+              />
+              <path
+                d="M 25 85 L 25 25 L 5 5 M 25 25 L 90 25"
+                fill="none"
+                stroke="#ffffff"
+                stroke-miterlimit="10"
+                pointer-events="all"
+                style="stroke: light-dark(rgb(255, 255, 255), rgb(18, 18, 18))"
+              />
             </g>
           </g>
         </g>

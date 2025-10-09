@@ -2,9 +2,9 @@
 defineProps({
   as: {
     type: String,
-    default: "div",
+    default: 'div',
   },
-});
+})
 </script>
 
 <template>

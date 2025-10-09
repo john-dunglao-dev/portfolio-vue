@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant dracula (&:where(.dracula, .dracula *));
@@ -27,7 +27,7 @@
   --color-foreground: #1f2937;
   --color-comment: #6b7280;
   --color-selection: #dbeafe;
-  --default-font-family: Menlo, Monaco, "Courier New", monospace;
+  --default-font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 
 @layer base {
@@ -192,7 +192,7 @@
   h5,
   h6 {
     color: var(--color-primary);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.075rem;
   }

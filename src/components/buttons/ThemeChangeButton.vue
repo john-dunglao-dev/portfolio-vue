@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { PhMoon, PhPersonArmsSpread, PhSun } from "@phosphor-icons/vue";
-import { useColorMode, useCycleList, useDark } from "@vueuse/core";
-import { watchEffect } from "vue";
-import { Theme } from "@/components/layouts/models/Theme";
+import { PhMoon, PhPersonArmsSpread, PhSun } from '@phosphor-icons/vue'
+import { useColorMode, useCycleList, useDark } from '@vueuse/core'
+import { watchEffect } from 'vue'
+import { Theme } from '@/components/layouts/models/Theme'
 
 // TODO: implement other themes later
 const mode = useColorMode<Theme>({
@@ -10,12 +10,12 @@ const mode = useColorMode<Theme>({
   modes: {
     dracula: Theme.DRACULA,
   },
-});
+})
 
-const { state, next } = useCycleList([Theme.LIGHT, Theme.DARK, Theme.DRACULA]);
+const { state, next } = useCycleList([Theme.LIGHT, Theme.DARK, Theme.DRACULA])
 watchEffect(() => {
-  mode.value = state.value;
-});
+  mode.value = state.value
+})
 </script>
 
 <template>
