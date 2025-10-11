@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { PhX } from '@phosphor-icons/vue'
 import { ref } from 'vue'
+import VButton from '@/components/buttons/VButton.vue'
 
 const dialogRef = ref<HTMLDialogElement | null>(null)
 
@@ -37,16 +38,26 @@ defineExpose({
       </button>
     </form>
 
-    <h2 class="text-xl font-semibold mb-2"><slot name="title">Default Title</slot></h2>
-    <p class="text-gray-600 dark:text-gray-300 mb-4">
-      <slot name="description">Default description text goes here.</slot>
-    </p>
+    <h2 class="text-xl font-semibold mb-2">
+      <slot name="title">Default Title</slot>
+    </h2>
+
     <div>
-      <slot>Default content goes here.</slot>
+      <slot name="override-content">
+        <p class="text-gray-600 dark:text-gray-300 mb-2">
+          <slot name="description">Default description text goes here.</slot>
+        </p>
+
+        <div>
+          <slot>Default content goes here.</slot>
+        </div>
+      </slot>
     </div>
 
-    <form method="dialog">
-      <button>close</button>
-    </form>
+    <div class="flex justify-end mt-2">
+      <form method="dialog">
+        <VButton color="secondary">close</VButton>
+      </form>
+    </div>
   </dialog>
 </template>

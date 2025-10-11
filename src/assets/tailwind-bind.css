@@ -27,6 +27,7 @@
   --color-foreground: #1f2937;
   --color-comment: #6b7280;
   --color-selection: #dbeafe;
+  --color-reserved-word: #b91c1c;
   --default-font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 
@@ -39,6 +40,8 @@
     --color-foreground: #f9fafb;
     --color-comment: #9ca3af;
     --color-selection: #1e3a8a;
+    --color-reserved-word: #b91c1c;
+    --color-function: #50fa7b;
   }
 
   /* Dracula Theme */
@@ -49,6 +52,8 @@
     --color-foreground: #f8f8f2;
     --color-comment: #6272a4;
     --color-selection: #44475a;
+    --color-reserved-word: #bd93f9;
+    --color-function: #50fa7b;
   }
 
   /* Nord Theme */
@@ -219,7 +224,7 @@
   i,
   strong,
   b {
-    color: var(--color-primary);
+    color: var(--color-reserved-word);
   }
 
   ::selection {

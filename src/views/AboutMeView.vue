@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import CaptionedBox from '@/components/boxes/CaptionedBox.vue'
 import GridBox from '@/components/boxes/GridBox.vue'
 import BorderCard from '@/components/cards/BorderCard.vue'
-import type VDialog from '@/components/modals/VDialog.vue'
+import VDialog from '@/components/modals/VDialog.vue'
 import {
   backendIcons,
   databaseIcons,

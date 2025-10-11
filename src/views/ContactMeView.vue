@@ -28,7 +28,7 @@
       <form class="space-y-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <label for="name" class="block text-sm font-medium">Name</label>
             <input
               type="text"
               id="name"
@@ -39,7 +39,7 @@
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <label for="email" class="block text-sm font-medium">Email</label>
             <input
               type="email"
               id="email"
@@ -51,7 +51,7 @@
         </div>
 
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <label for="message" class="block text-sm font-medium">Message</label>
           <textarea
             id="message"
             name="message"
