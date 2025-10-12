@@ -111,3 +111,50 @@ export const AllSkill = {
   ...DatabaseSkill,
   ...PracticedSkill,
 }
+
+export type SkillDisplay = {
+  title: AllSkill
+  description: string
+  icon: string
+}
+
+export type SkillCategory = {
+  label: string
+  skills: SkillDisplay[]
+}
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    label: 'Frontend Skills',
+    skills: [
+      {
+        title: FrontendSkill.HTML,
+        description:
+          'This is the first skill I picked up when I started to know more about web development. I thought it was easy to learn and understand the structure of a web page until it isn`t.',
+        icon: frontendIcons[FrontendSkill.HTML],
+      },
+      {
+        title: FrontendSkill.CSS,
+        description:
+          'I learned CSS alongside HTML. I found it interesting to style web pages and make them visually appealing. My first "This is fun" moment from when I started learning.',
+        icon: frontendIcons[FrontendSkill.CSS],
+      },
+    ],
+  },
+  {
+    label: 'Backend Skills',
+    skills: [],
+  },
+  {
+    label: 'DevOps Skills',
+    skills: [],
+  },
+  {
+    label: 'Database Skills',
+    skills: [],
+  },
+  {
+    label: 'Practiced Skills',
+    skills: [],
+  },
+]
