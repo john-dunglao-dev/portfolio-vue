@@ -3,7 +3,7 @@ export enum FrontendSkill {
   CSS = 'CSS',
   JavaScript = 'JavaScript',
   TypeScript = 'TypeScript',
-  Vue = 'Vue.js',
+  Vue = 'Vue',
   React = 'React',
   TailwindCSS = 'Tailwind CSS',
   Bootstrap = 'Bootstrap',
@@ -138,6 +138,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         description:
           'I learned CSS alongside HTML. I found it interesting to style web pages and make them visually appealing. My first "This is fun" moment from when I started learning.',
         icon: frontendIcons[FrontendSkill.CSS],
+      },
+      {
+        title: FrontendSkill.JavaScript,
+        description:
+          'JavaScript is the programming language that made web pages interactive. I learned it after HTML and CSS, and it opened up a whole new world of possibilities for me in web development.',
+        icon: frontendIcons[FrontendSkill.JavaScript],
+      },
+      {
+        title: FrontendSkill.TypeScript,
+        description:
+          'This paved the way for me to learn more advanced frontend frameworks and libraries. TypeScript is a superset of JavaScript that adds static typing, which helps catch errors early and improves code maintainability. I instantly fell in love with it because of its features.',
+        icon: frontendIcons[FrontendSkill.TypeScript],
+      },
+      {
+        title: FrontendSkill.Vue,
+        description:
+          'Vue is the first frontend framework I learned. I found it easy to pick up and understand its concepts. It has a gentle learning curve, which made it perfect for beginners like me that time.',
+        icon: frontendIcons[FrontendSkill.Vue],
       },
     ],
   },
