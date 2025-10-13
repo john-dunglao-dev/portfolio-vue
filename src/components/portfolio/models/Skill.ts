@@ -157,6 +157,18 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
           'Vue is the first frontend framework I learned. I found it easy to pick up and understand its concepts. It has a gentle learning curve, which made it perfect for beginners like me that time.',
         icon: frontendIcons[FrontendSkill.Vue],
       },
+      {
+        title: FrontendSkill.Bootstrap,
+        description:
+          'I learned Bootstrap after learning the basics of CSS. It is a popular CSS framework that provides pre-designed components and styles, making it easier to create responsive and visually appealing web pages quickly.',
+        icon: frontendIcons[FrontendSkill.Bootstrap],
+      },
+      {
+        title: FrontendSkill.TailwindCSS,
+        description:
+          'I learned Tailwind CSS after getting comfortable with CSS and Bootstrap. It is a utility-first CSS framework that allows for rapid UI development by providing a set of pre-defined classes. I like how it promotes a different approach to styling compared to traditional CSS frameworks.',
+        icon: frontendIcons[FrontendSkill.TailwindCSS],
+      },
     ],
   },
   {
