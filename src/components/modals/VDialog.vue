@@ -1,61 +1,66 @@
 <script setup lang="ts">
-import { PhX } from '@phosphor-icons/vue'
-import { ref } from 'vue'
-import VButton from '@/components/buttons/VButton.vue'
+import { TransitionRoot, TransitionChild, Dialog, DialogTitle, DialogPanel } from '@headlessui/vue'
 
-const dialogRef = ref<HTMLDialogElement | null>(null)
+const isOpen = defineModel<boolean>('isOpen', { required: true })
 
-const show = () => {
-  if (!dialogRef.value) {
-    console.error('[Show Dialog] Referenced dialog is not found')
-  }
-
-  dialogRef.value?.showModal()
-}
-const hide = () => {
-  if (!dialogRef.value) {
-    console.error('[Hide Dialog] Referenced dialog is not found')
-  }
-
-  dialogRef.value?.close()
-}
-
-defineExpose({
-  show,
-  hide,
-})
+const closeModal = () => (isOpen.value = false)
 </script>
 
 <template>
-  <dialog
-    ref="dialogRef"
-    class="border rounded-lg shadow hover:shadow-lg transition-shadow duration-300 top-1/2 left-1/2 -translate-1/2"
-    @click.self="hide"
-  >
-    <div class="p-4">
-      <form method="dialog" class="absolute right-2 top-2">
-        <button>
-          <PhX class="text-gray-500 hover:text-gray-700 transition-colors duration-200" />
-        </button>
-      </form>
+  <TransitionRoot appear :show="isOpen" as="template">
+    <Dialog as="div" @close="closeModal" class="relative z-10">
+      <TransitionChild
+        as="template"
+        enter="duration-300 ease-out"
+        enter-from="opacity-0"
+        enter-to="opacity-100"
+        leave="duration-200 ease-in"
+        leave-from="opacity-100"
+        leave-to="opacity-0"
+      >
+        <div class="fixed inset-0 bg-black/25" />
+      </TransitionChild>
 
-      <h2 class="text-xl font-semibold mb-2">
-        <slot name="title">Default Title</slot>
-      </h2>
+      <div class="fixed inset-0 overflow-y-auto">
+        <div class="flex min-h-full items-center justify-center p-4 text-center">
+          <TransitionChild
+            as="template"
+            enter="duration-300 ease-out"
+            enter-from="opacity-0 scale-95"
+            enter-to="opacity-100 scale-100"
+            leave="duration-200 ease-in"
+            leave-from="opacity-100 scale-100"
+            leave-to="opacity-0 scale-95"
+          >
+            <DialogPanel
+              class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+            >
+              <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
+                <slot name="title">Payment successful</slot>
+              </DialogTitle>
 
-      <div>
-        <slot name="override-content">
-          <p class="text-gray-600 dark:text-gray-300 mb-2">
-            <slot name="description">Default description text goes here.</slot>
-          </p>
-        </slot>
+              <div class="mt-2">
+                <slot name="description">
+                  <p class="text-sm text-gray-500">
+                    Your payment has been successfully submitted. We’ve sent you an email with all
+                    of the details of your order.
+                  </p>
+                </slot>
+              </div>
+
+              <div class="mt-4">
+                <button
+                  type="button"
+                  class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  @click="closeModal"
+                >
+                  Got it, thanks!
+                </button>
+              </div>
+            </DialogPanel>
+          </TransitionChild>
+        </div>
       </div>
-
-      <div class="flex justify-end mt-2">
-        <form method="dialog">
-          <VButton color="secondary">close</VButton>
-        </form>
-      </div>
-    </div>
-  </dialog>
+    </Dialog>
+  </TransitionRoot>
 </template>

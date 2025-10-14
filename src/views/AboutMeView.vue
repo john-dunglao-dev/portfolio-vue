@@ -6,12 +6,14 @@ import BorderCard from '@/components/cards/BorderCard.vue'
 import VDialog from '@/components/modals/VDialog.vue'
 import { SKILL_CATEGORIES, type SkillDisplay } from '@/components/portfolio/models/Skill'
 
-const modal = ref<InstanceType<typeof VDialog>>()
+// const modal = ref<InstanceType<typeof VDialog>>()
 const selectedSkill = ref<SkillDisplay | null>(null)
+const isModalOpen = ref(false)
 
 const openModal = (skill: SkillDisplay) => {
   selectedSkill.value = skill
-  modal.value?.show()
+  // modal.value?.show()
+  isModalOpen.value = true
 }
 </script>
 
@@ -44,7 +46,7 @@ const openModal = (skill: SkillDisplay) => {
 
       <GridBox as="ul">
         <li v-for="(skill, skillIndex) in group.skills" :key="'SkillItem' + skillIndex">
-          <button class="block w-full h-full" @click="openModal(skill)">
+          <button class="block w-full h-full focus:outline-primary" @click="openModal(skill)">
             <BorderCard
               class="grid grid-cols-2 md:grid-cols-1 gap-2 place-items-center py-3 h-full"
             >
@@ -62,7 +64,7 @@ const openModal = (skill: SkillDisplay) => {
     </CaptionedBox>
 
     <!-- TODO: Add handler to open modal with skill details -->
-    <VDialog ref="modal">
+    <VDialog v-model:is-open="isModalOpen">
       <template #title>
         {{ selectedSkill?.title }}
       </template>
