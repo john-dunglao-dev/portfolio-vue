@@ -169,11 +169,60 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
           'I learned Tailwind CSS after getting comfortable with CSS and Bootstrap. It is a utility-first CSS framework that allows for rapid UI development by providing a set of pre-defined classes. I like how it promotes a different approach to styling compared to traditional CSS frameworks.',
         icon: frontendIcons[FrontendSkill.TailwindCSS],
       },
+      {
+        title: FrontendSkill.Bootstrap,
+        description:
+          'I learned Bootstrap after learning the basics of CSS. It is a popular CSS framework that provides pre-designed components and styles, making it easier to create responsive and visually appealing web pages quickly.',
+        icon: frontendIcons[FrontendSkill.Bootstrap],
+      },
+      {
+        title: FrontendSkill.SASS,
+        description:
+          'I learned SASS when I worked with Vue.js projects that required more advanced styling capabilities. SASS is a CSS preprocessor that adds features like variables, nesting, and mixins, making it easier to write and maintain complex stylesheets.',
+        icon: frontendIcons[FrontendSkill.SASS],
+      },
+      {
+        title: FrontendSkill.Vite,
+        description:
+          'I started using Vite as my primary build tool for frontend projects due to its fast development server and optimized build process. Vite leverages native ES modules and provides a smooth development experience with features like hot module replacement (HMR). It is incredibly fast and efficient which is why I continued using it for my projects.',
+        icon: frontendIcons[FrontendSkill.Vite],
+      },
+      {
+        title: FrontendSkill.Webpack,
+        description:
+          'I learned Webpack when I wanted to have more control over the build process of my frontend projects specifically in Vue.js framework. Webpack is a powerful module bundler that allows for advanced configuration and optimization of assets. Although it has a steeper learning curve compared to Vite, I found it valuable for larger projects that require custom build setups.',
+        icon: frontendIcons[FrontendSkill.Webpack],
+      },
+      {
+        title: FrontendSkill.Rollup,
+        description:
+          'I explored Rollup as an alternative module bundler for specific frontend projects that required tree-shaking and optimized bundle sizes. Rollup is known for its efficient bundling of ES modules and is often used for libraries and smaller applications. I found it useful for projects where minimizing bundle size was a priority.',
+        icon: frontendIcons[FrontendSkill.Rollup],
+      },
     ],
   },
   {
     label: 'Backend Skills',
-    skills: [],
+    skills: [
+      {
+        title: BackendSkill.NodeJS,
+        description:
+          'I learned Node.js as a start for real-time web applications and server-side development. It allows me to use JavaScript on the server, which was familiar territory for me after working with frontend development.',
+        icon: backendIcons[BackendSkill.NodeJS],
+      },
+      {
+        title: BackendSkill.PHP,
+        description:
+          'PHP is the first backend programming language I learned in the bootcamp I attended. I found it easy to pick up and understand its syntax. It has a gentle learning curve, which made it perfect for beginners like me that time.',
+        icon: backendIcons[BackendSkill.PHP],
+      },
+      {
+        title: BackendSkill.Python,
+        description:
+          'I learned Python for the first company I worked with. It is a versatile programming language that is widely used in web development, data analysis, artificial intelligence, and more. I appreciate its readability and simplicity, which makes it easy to write and maintain code. I also made a real-time binary data converter that came from a 3rd party using this language.',
+        icon: backendIcons[BackendSkill.Python],
+      },
+    ],
   },
   {
     label: 'DevOps Skills',
