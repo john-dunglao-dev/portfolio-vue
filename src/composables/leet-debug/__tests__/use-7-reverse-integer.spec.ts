@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { useReverseInteger } from '../use-reverse-integer'
+import { useReverseInteger } from '@/composables/leet-debug/use-7-reverse-integer'
 
 describe('useReverseInteger', () => {
   const { myAnswer } = useReverseInteger()

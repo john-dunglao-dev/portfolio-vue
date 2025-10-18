@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { useZigzagConversion } from '@/composables/leet-debug/use-zig-zag-conversion'
+import { useZigzagConversion } from '@/composables/leet-debug/use-6-zig-zag-conversion'
 
 describe('useZigzagConversion', () => {
   const { myAnswer } = useZigzagConversion()

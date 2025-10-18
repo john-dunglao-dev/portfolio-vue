@@ -1,5 +1,5 @@
 import { describe, expect, it, test } from 'vitest'
-import { useLongestPalindromicSubstring } from '@/composables/leet-debug/use-longest-palindromic-substring'
+import { useLongestPalindromicSubstring } from '@/composables/leet-debug/use-5-longest-palindromic-substring'
 
 describe('useLongestPalindromicSubstring', () => {
   const { myAnswer, solution } = useLongestPalindromicSubstring()

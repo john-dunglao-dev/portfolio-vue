@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { useLengthOfLongestSubstring } from '@/composables/leet-debug/use-length-of-longest-substring'
+import { useLengthOfLongestSubstring } from '@/composables/leet-debug/use-3-length-of-longest-substring'
 
 describe('useLengthOfLongestSubstring', () => {
   const { myAnswer, solution } = useLengthOfLongestSubstring()

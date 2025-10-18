@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { useTwoSum } from '../use-two-sum'
+import { useTwoSum } from '@/composables/leet-debug/use-1-two-sum'
 
 describe('useTwoSum', () => {
   const { solution } = useTwoSum()

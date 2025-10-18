@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { useFindMedianSortedArrays } from '@/composables/leet-debug/use-find-median-sorted-arrays'
+import { useFindMedianSortedArrays } from '@/composables/leet-debug/use-4-find-median-sorted-arrays'
 
 const { myAnswer, solution } = useFindMedianSortedArrays()
 

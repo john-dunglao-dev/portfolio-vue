@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { useAddTwoNumbers } from '@/composables/leet-debug/use-add-two-numbers'
+import { useAddTwoNumbers } from '@/composables/leet-debug/use-2-add-two-numbers'
 
 describe('useAddTwoNumbers', () => {
   const { myAnswer, solution, stringToReversedListNode } = useAddTwoNumbers()
