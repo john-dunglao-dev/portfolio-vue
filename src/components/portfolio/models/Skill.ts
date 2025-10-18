@@ -222,6 +222,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
           'I learned Python for the first company I worked with. It is a versatile programming language that is widely used in web development, data analysis, artificial intelligence, and more. I appreciate its readability and simplicity, which makes it easy to write and maintain code. I also made a real-time binary data converter that came from a 3rd party using this language.',
         icon: backendIcons[BackendSkill.Python],
       },
+      {
+        title: BackendSkill.Express,
+        description:
+          'I learned Express.js as the first backend framework for Node.js for creating my first real-time game data API receptor. It provides a simple and flexible way to handle routing, middleware, and server-side logic. I found it easy to set up and get started with building backend applications quickly.',
+        icon: backendIcons[BackendSkill.Express],
+      },
+      {
+        title: BackendSkill.Django,
+        description:
+          'I learned Django for the first company I worked for. Django is a high-level web framework that follows the model-view-controller (MVC) architectural pattern. It provides a lot of built-in features and follows best practices, which helps me develop robust and scalable applications efficiently. It was easy because I already knew Laravel that time.',
+        icon: backendIcons[BackendSkill.Django],
+      },
+      {
+        title: BackendSkill.Laravel,
+        description:
+          'I learned Laravel as the first backend framework for PHP for creating web applications and APIs. It follows the model-view-controller (MVC) architectural pattern and provides a lot of built-in features that make development faster and easier. I found its elegant syntax and extensive documentation helpful in getting started quickly. This is the first backend framework I learned because of the bootcamp I attended for beginner web developers.',
+        icon: backendIcons[BackendSkill.Laravel],
+      },
     ],
   },
   {
