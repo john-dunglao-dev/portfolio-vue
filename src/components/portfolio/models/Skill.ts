@@ -31,8 +31,6 @@ export const frontendIcons: Record<FrontendSkill, string> = {
 export enum BackendSkill {
   NodeJS = 'Node.js',
   Express = 'Express.js',
-  MongoDB = 'MongoDB',
-  Redis = 'Redis',
   Laravel = 'Laravel',
   PHP = 'PHP',
   Python = 'Python',
@@ -45,8 +43,6 @@ export enum BackendSkill {
 export const backendIcons: Record<BackendSkill, string> = {
   [BackendSkill.NodeJS]: 'devicon-nodejs-plain',
   [BackendSkill.Express]: 'devicon-express-original',
-  [BackendSkill.MongoDB]: 'devicon-mongodb-plain',
-  [BackendSkill.Redis]: 'devicon-redis-plain',
   [BackendSkill.Laravel]: 'devicon-laravel-plain',
   [BackendSkill.PHP]: 'devicon-php-plain',
   [BackendSkill.Python]: 'devicon-python-plain',
@@ -240,6 +236,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
           'I learned Laravel as the first backend framework for PHP for creating web applications and APIs. It follows the model-view-controller (MVC) architectural pattern and provides a lot of built-in features that make development faster and easier. I found its elegant syntax and extensive documentation helpful in getting started quickly. This is the first backend framework I learned because of the bootcamp I attended for beginner web developers.',
         icon: backendIcons[BackendSkill.Laravel],
       },
+      {
+        title: BackendSkill.Flask,
+        description:
+          'I learned Flask for a personal project that required a lightweight and flexible web framework. Flask is a micro-framework that provides the essentials for building web applications without unnecessary bloat. I appreciated its simplicity and extensibility, which allowed me to customize my application according to my needs.',
+        icon: backendIcons[BackendSkill.Flask],
+      },
+      {
+        title: BackendSkill.Java,
+        description:
+          'I learned Java as a requirement for a specific freelance project. I thought it was challenging at first due to its syntax and object-oriented programming concepts. However, I gradually became comfortable with it and appreciated its robustness and scalability for building enterprise-level applications.',
+        icon: backendIcons[BackendSkill.Java],
+      },
+      {
+        title: BackendSkill.Springboot,
+        description:
+          'I learned Spring Boot as the backend framework for Java for creating web applications and APIs. Spring Boot simplifies the setup and configuration of Spring applications, allowing me to focus on writing business logic. I found its extensive ecosystem and community support beneficial in building robust and scalable applications.',
+        icon: backendIcons[BackendSkill.Springboot],
+      },
     ],
   },
   {
@@ -248,7 +262,38 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     label: 'Database Skills',
-    skills: [],
+    skills: [
+      {
+        title: DatabaseSkill.MySQL,
+        description:
+          'I learned MySQL as the first database management system I worked with. It is a popular relational database that uses structured query language (SQL) for managing and manipulating data. I found it easy to understand and work with, especially for small to medium-sized applications.',
+        icon: databaseIcons[DatabaseSkill.MySQL],
+      },
+      {
+        title: DatabaseSkill.PostgreSQL,
+        description:
+          'I learned PostgreSQL for the first company I worked with and found it to be a powerful database solution. PostgreSQL is an open-source relational database that offers a wide range of features, including support for complex queries, data integrity, and extensibility. I appreciated its robustness and performance for handling large datasets.',
+        icon: databaseIcons[DatabaseSkill.PostgreSQL],
+      },
+      {
+        title: DatabaseSkill.Redis,
+        description:
+          'I learned Redis as a NoSQL database for caching and real-time data storage. Redis is an in-memory data structure store that provides high performance and low latency. I found it useful for improving the speed and responsiveness of applications by storing frequently accessed data in memory.',
+        icon: databaseIcons[DatabaseSkill.Redis],
+      },
+      {
+        title: DatabaseSkill.Elasticsearch,
+        description:
+          'I learned Elasticsearch for a project that required advanced search capabilities. Elasticsearch is a distributed search and analytics engine that allows for fast and efficient searching of large datasets. I found it valuable for implementing powerful search functionalities in applications.',
+        icon: databaseIcons[DatabaseSkill.Elasticsearch],
+      },
+      {
+        title: DatabaseSkill.MongoDB,
+        description:
+          'I learned MongoDB as a NoSQL database for handling unstructured data. MongoDB is a document-oriented database that stores data in flexible, JSON-like documents. I appreciated its scalability and ease of use, especially for applications that require rapid development and iteration.',
+        icon: databaseIcons[DatabaseSkill.MongoDB],
+      },
+    ],
   },
   {
     label: 'Practiced Skills',
