@@ -57,6 +57,8 @@ export enum DevOpsSkill {
   Docker = 'Docker',
   GCP = 'Google Cloud Platform',
   DigitalOcean = 'DigitalOcean',
+  Vagrant = 'Vagrant',
+  VirtualBox = 'VirtualBox',
 }
 
 export const devopsIcons: Record<DevOpsSkill, string> = {
@@ -64,6 +66,8 @@ export const devopsIcons: Record<DevOpsSkill, string> = {
   [DevOpsSkill.Docker]: 'devicon-docker-plain',
   [DevOpsSkill.GCP]: 'devicon-googlecloud-plain',
   [DevOpsSkill.DigitalOcean]: 'devicon-digitalocean-plain',
+  [DevOpsSkill.Vagrant]: 'devicon-vagrant-plain',
+  [DevOpsSkill.VirtualBox]: 'devicon-virtualbox-plain',
 }
 
 export enum DatabaseSkill {
@@ -258,7 +262,32 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     label: 'DevOps Skills',
-    skills: [],
+    skills: [
+      {
+        title: DevOpsSkill.Git,
+        description:
+          'I learned Git in the bootcamp I attended as a beginner web developer. It is a distributed version control system that allows me to track changes in my code, collaborate with others, and manage different versions of my projects. I found it essential for effective teamwork and code management.',
+        icon: devopsIcons[DevOpsSkill.Git],
+      },
+      {
+        title: DevOpsSkill.Docker,
+        description:
+          'I already learned Docker when I am learning using my personal projects. It was further polished when I worked with my previous company. Docker is a containerization platform that allows me to package applications and their dependencies into lightweight, portable containers. I found it useful for ensuring consistency across different environments and simplifying deployment processes.',
+        icon: devopsIcons[DevOpsSkill.Docker],
+      },
+      {
+        title: DevOpsSkill.Vagrant,
+        description:
+          'I learned Vagrant to create and manage reproducible development environments. Vagrant is a tool for building and managing virtualized development environments using simple configuration files. I found it helpful for ensuring that my development environment is consistent with production and for easily sharing my setup with others.',
+        icon: devopsIcons[DevOpsSkill.Vagrant],
+      },
+      {
+        title: DevOpsSkill.VirtualBox,
+        description:
+          'I learned VirtualBox as a free and open-source virtualization software. VirtualBox allows me to run multiple operating systems on my computer, making it easier to test applications in different environments. I found it useful for creating isolated development environments and for learning about different operating systems.',
+        icon: devopsIcons[DevOpsSkill.VirtualBox],
+      },
+    ],
   },
   {
     label: 'Database Skills',
