@@ -13,6 +13,8 @@ export enum FrontendSkill {
   Webpack = 'Webpack',
 }
 
+export const CODING_SKILL_ICON = 'devicon-htmx-plain'
+
 export const frontendIcons: Record<FrontendSkill, string> = {
   [FrontendSkill.HTML]: 'devicon-html5-plain',
   [FrontendSkill.CSS]: 'devicon-css3-plain',
@@ -67,7 +69,7 @@ export const devopsIcons: Record<DevOpsSkill, string> = {
   [DevOpsSkill.GCP]: 'devicon-googlecloud-plain',
   [DevOpsSkill.DigitalOcean]: 'devicon-digitalocean-plain',
   [DevOpsSkill.Vagrant]: 'devicon-vagrant-plain',
-  [DevOpsSkill.VirtualBox]: 'devicon-virtualbox-plain',
+  [DevOpsSkill.VirtualBox]: 'devicon-oracle-original',
 }
 
 export enum DatabaseSkill {
@@ -91,7 +93,7 @@ export enum PracticedSkill {
   RESTfulAPI = 'RESTful API',
   GraphQL = 'GraphQL',
   TDD = 'Test-Driven Development (TDD)',
-  CI_CD = 'Continuous Integration/Continuous Deployment (CI/CD)',
+  CI_CD = 'CI/CD',
   Agile = 'Agile Methodologies',
   Scrum = 'Scrum',
   Kanban = 'Kanban',
@@ -326,6 +328,31 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     label: 'Practiced Skills',
-    skills: [],
+    skills: [
+      {
+        title: PracticedSkill.RESTfulAPI,
+        description:
+          'I have experience designing and implementing RESTful APIs for various web applications. I understand the principles of REST and how to create APIs that are scalable, maintainable, and easy to use.',
+        icon: CODING_SKILL_ICON,
+      },
+      {
+        title: PracticedSkill.TDD,
+        description:
+          'I practice Test-Driven Development (TDD) in my projects to ensure code quality and reliability. I write tests before implementing features, which helps me catch bugs early and improve the overall design of my code.',
+        icon: CODING_SKILL_ICON,
+      },
+      {
+        title: PracticedSkill.CI_CD,
+        description:
+          'I have experience setting up Continuous Integration/Continuous Deployment (CI/CD) pipelines to automate the build, test, and deployment processes. This helps me deliver updates quickly and reliably while maintaining high code quality.',
+        icon: CODING_SKILL_ICON,
+      },
+      {
+        title: PracticedSkill.Containerization,
+        description:
+          'I utilize containerization technologies like Docker to create consistent and portable development and deployment environments. This allows me to streamline the deployment process and ensure that applications run smoothly across different environments.',
+        icon: CODING_SKILL_ICON,
+      },
+    ],
   },
 ]
