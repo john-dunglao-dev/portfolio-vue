@@ -37,27 +37,23 @@ onMounted(async () => {
           </p>
         </div>
         <div class="flex gap-4 flex-wrap">
-          <button
+          <RouterLink
+            :to="{ name: 'AboutMe' }"
             class="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white border-none rounded-full text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/60 hover:-translate-y-1"
           >
-            View My Work
-          </button>
-          <button
+            Know More
+          </RouterLink>
+          <RouterLink
+            :to="{ name: 'ContactMe' }"
             class="px-8 py-4 bg-transparent text-white border-2 border-white/30 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-white/10 hover:border-white/50 hover:-translate-y-1"
           >
             Get in Touch
-          </button>
+          </RouterLink>
         </div>
       </div>
       <div class="flex justify-center items-center">
         <MyLogo />
       </div>
-    </div>
-
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70">
-      <div
-        class="w-5 h-5 border-r-2 border-b-2 border-white/70 transform rotate-45 animate-bounce"
-      ></div>
     </div>
   </div>
 </template>
