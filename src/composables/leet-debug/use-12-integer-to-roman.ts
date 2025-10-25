@@ -1,4 +1,4 @@
-export const use11RomanToInteger = () => {
+export const use11IntegerToRoman = () => {
   const myAnswer = (num: number): string => {
     console.debug('--- Debug Info ---')
     console.debug('Input number:', num)

@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
-import { use11RomanToInteger } from '../use-12-roman-to-integer'
+import { use11IntegerToRoman } from '@/composables/leet-debug/use-12-integer-to-roman'
 
-describe('use11RomanToInteger', () => {
-  const { myAnswer } = use11RomanToInteger()
+describe('use11IntegerToRoman', () => {
+  const { myAnswer } = use11IntegerToRoman()
 
   it('should convert 1 to I', () => {
     expect(myAnswer(1)).toBe('I')
