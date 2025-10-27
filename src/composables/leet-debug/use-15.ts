@@ -61,6 +61,8 @@ export const use15 = () => {
     const arranged = nums.sort((a, b) => a - b)
 
     for (let i = 0; i < arranged.length; i++) {
+      if (i > 0 && arranged[i] === arranged[i - 1]) continue // Skip duplicates for the first element
+
       let l = i + 1
       let r = arranged.length - 1
 
