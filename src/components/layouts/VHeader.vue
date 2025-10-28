@@ -5,7 +5,7 @@ import MyLogoMini from '@/components/icons/MyLogoMini.vue'
 </script>
 
 <template>
-  <header class="bg-white dark:bg-gray-400 dracula:bg-gray-800 shadow">
+  <header class="bg-comment shadow">
     <div class="container mx-auto flex h-16 items-center justify-between px-4">
       <!-- TODO: Implement mobile menu -->
       <!-- Mobile menu button -->
