@@ -8,7 +8,7 @@ const closeModal = () => (isOpen.value = false)
 
 <template>
   <TransitionRoot appear :show="isOpen" as="template">
-    <Dialog as="div" @close="closeModal" class="relative z-10">
+    <Dialog as="div" @close="closeModal" class="relative z-60">
       <TransitionChild
         as="template"
         enter="duration-300 ease-out"
@@ -18,7 +18,7 @@ const closeModal = () => (isOpen.value = false)
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
-        <div class="fixed inset-0 bg-black/25" />
+        <div class="fixed inset-0 bg-black/70" />
       </TransitionChild>
 
       <div class="fixed inset-0 overflow-y-auto">
@@ -33,9 +33,9 @@ const closeModal = () => (isOpen.value = false)
             leave-to="opacity-0 scale-95"
           >
             <DialogPanel
-              class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+              class="w-full max-w-md transform overflow-hidden rounded-2xl bg-background p-6 text-left align-middle shadow-xl transition-all"
             >
-              <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
+              <DialogTitle as="h2">
                 <slot name="title">Payment successful</slot>
               </DialogTitle>
 
@@ -48,13 +48,13 @@ const closeModal = () => (isOpen.value = false)
                 </slot>
               </div>
 
-              <div class="mt-4">
+              <div class="mt-4 text-right">
                 <button
                   type="button"
-                  class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  class="inline-flex justify-center rounded-md border border-transparent bg-secondary px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   @click="closeModal"
                 >
-                  Got it, thanks!
+                  Close
                 </button>
               </div>
             </DialogPanel>

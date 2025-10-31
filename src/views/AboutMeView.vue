@@ -19,29 +19,34 @@ const openModal = (skill: SkillDisplay) => {
 
 <template>
   <div>
-    <h1 class="text-3xl my-4">About Me</h1>
+    <h1 class="my-4">About Me</h1>
 
-    <p>This is the About Me page.</p>
-    <p>
-      A passionate and dedicated software developer with a strong foundation in web development and
-      a hardcore gamer. I have experience working with various programming languages and frameworks.
-      Always eager to learn new technologies and improve my skills. My goal for the people I helpis
-      to create efficient, scalable, and user-friendly applications that solve real-world problems.
-    </p>
-    <p>
-      I graduated with an education degree in for Secondary Education but my passion for technology
-      and programming led me to pursue a career in software development. I have since honed my
-      skills through self-study, online courses, and hands-on experience in various projects. I am
-      committed to continuous learning and growth in the ever-evolving field of technology.
-    </p>
+    <div class="space-y-2">
+      <p>
+        A passionate and dedicated software developer with a strong foundation in web development
+        and a hardcore gamer. I have experience working with various programming languages and
+        frameworks. Always eager to learn new technologies and improve my skills. My goal for the
+        people I helpis to create efficient, scalable, and user-friendly applications that solve
+        real-world problems.
+      </p>
 
-    <p>Here are some of my skills:</p>
+      <p>
+        I graduated with an education degree in for Secondary Education but my passion for
+        technology and programming led me to pursue a career in software development. I have since
+        honed my skills through self-study, online courses, and hands-on experience in various
+        projects. I am committed to continuous learning and growth in the ever-evolving field of
+        technology.
+      </p>
+
+      <p>Here are some of my skills:</p>
+    </div>
     <CaptionedBox
       v-for="(group, categoryIndex) in SKILL_CATEGORIES"
       :key="'SkillCategoryGroup' + categoryIndex"
+      class="mt-4"
     >
       <template #legend>
-        <h2 class="text-lg font-bold">{{ group.label }}</h2>
+        <h5>{{ group.label }}</h5>
       </template>
 
       <GridBox as="ul">
@@ -66,11 +71,15 @@ const openModal = (skill: SkillDisplay) => {
     <!-- TODO: Add handler to open modal with skill details -->
     <VDialog v-model:is-open="isModalOpen">
       <template #title>
-        {{ selectedSkill?.title }}
+        <h2>
+          {{ selectedSkill?.title }}
+        </h2>
       </template>
 
       <template #description>
-        {{ selectedSkill?.description }}
+        <p>
+          {{ selectedSkill?.description }}
+        </p>
       </template>
     </VDialog>
   </div>
