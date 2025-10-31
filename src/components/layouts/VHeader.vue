@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { PhList } from '@phosphor-icons/vue'
-import ThemeChangeButton from '@/components/buttons/ThemeChangeButton.vue'
 import MyLogoMini from '@/components/icons/MyLogoMini.vue'
+import ThemeChange from '@/components/layouts/ThemeChange.vue'
 </script>
 
 <template>
@@ -61,7 +61,7 @@ import MyLogoMini from '@/components/icons/MyLogoMini.vue'
 
         <ul>
           <li>
-            <ThemeChangeButton />
+            <ThemeChange />
           </li>
         </ul>
       </nav>
