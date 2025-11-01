@@ -34,11 +34,14 @@ const selected = defineModel('selected', {
       >
         <ListboxOption
           v-for="(option, index) in options"
+          v-slot="{ selected: optionSelected }"
           :key="`ListboxOption-${index}`"
           :value="option"
           class="relative cursor-default select-none py-2 px-4 hover:bg-primary"
         >
-          <span class="block truncate">{{ option.label }}</span>
+          <span class="block truncate" :class="{ 'font-bold': optionSelected }">
+            {{ option.label }}
+          </span>
         </ListboxOption>
       </ListboxOptions>
     </div>

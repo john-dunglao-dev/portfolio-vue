@@ -227,7 +227,7 @@
     font-size: var(--text-xl);
   }
 
-  h2 p,
+  p,
   span,
   div,
   li,
@@ -236,8 +236,10 @@
   label,
   input,
   textarea,
-  button {
+  button,
+  select {
     color: var(--color-foreground);
+    font-weight: var(--font-weight-extralight);
   }
 
   a {
