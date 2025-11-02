@@ -52,7 +52,7 @@ onMounted(async () => {
         </div>
       </div>
       <div class="flex justify-center items-center">
-        <MyLogo />
+        <MyLogo class="text-primary" />
       </div>
     </div>
   </div>
