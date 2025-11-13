@@ -17,6 +17,14 @@ export default {
         config.headers.Accept = 'application/json'
         config.headers['Content-Type'] = 'application/json'
 
+        console.debug(
+          '[INTERCEPTOR] Transforming url:',
+          config?.url,
+          'to',
+          import.meta.env.VITE_API_BASE_URL + config.url
+        )
+        config.url = import.meta.env.VITE_API_BASE_URL + config.url
+
         return config
       },
       (error: AxiosError) => {

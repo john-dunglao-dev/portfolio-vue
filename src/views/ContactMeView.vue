@@ -1,4 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import axios from 'axios'
+import { ref } from 'vue'
+
+const name = ref('')
+const email = ref('')
+const subject = ref('')
+const message = ref('')
+
+const sendMessageToAuthor = () => {
+  axios
+    .post('/api/contact/send-to-author', {
+      name: name.value,
+      email: email.value,
+      subject: subject.value,
+      message: message.value,
+    })
+    .then((response) => {
+      console.log('Message sent successfully:', response.data)
+    })
+    .catch((error) => {
+      console.error('Error sending message:', error)
+    })
+}
+</script>
 
 <template>
   <div class="mt-6">
@@ -25,11 +49,12 @@
     <p class="my-4">Or use this form to reach out</p>
 
     <div>
-      <form class="space-y-4">
+      <form class="space-y-4" @submit.prevent="sendMessageToAuthor">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label for="name" class="block text-sm font-medium">Name</label>
             <input
+              v-model="name"
               type="text"
               id="name"
               name="name"
@@ -41,6 +66,7 @@
           <div>
             <label for="email" class="block text-sm font-medium">Email</label>
             <input
+              v-model="email"
               type="email"
               id="email"
               name="email"
@@ -51,8 +77,21 @@
         </div>
 
         <div>
+          <label for="subject" class="block text-sm font-medium">Subject</label>
+          <input
+            v-model="subject"
+            type="text"
+            id="subject"
+            name="subject"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            required
+          />
+        </div>
+
+        <div>
           <label for="message" class="block text-sm font-medium">Message</label>
           <textarea
+            v-model="message"
             id="message"
             name="message"
             rows="4"
