@@ -28,6 +28,14 @@ export default {
         return config
       },
       (error: AxiosError) => {
+        console.error('[INTERCEPTOR] Axios request error:', error?.config?.url, error?.message)
+
+        if (error?.response?.status !== 500) {
+          return Promise.reject(error)
+        }
+
+        // Handle 500 errors globally here via displaying a modal or toast notification
+
         return Promise.reject(error)
       }
     )
