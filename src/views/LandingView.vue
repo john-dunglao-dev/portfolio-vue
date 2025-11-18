@@ -11,12 +11,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div
-    class="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex flex-col justify-center items-center p-8 relative overflow-hidden"
-  >
-    <!-- Grid pattern overlay -->
-    <div class="absolute inset-0 opacity-30 bg-grid-pattern"></div>
-
+  <div class="min-h-screen flex flex-col justify-center items-center p-8 relative overflow-hidden">
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl w-full items-center z-10 transition-all duration-700 ease-out"
       :class="{
@@ -25,11 +20,7 @@ onMounted(async () => {
       }"
     >
       <div class="text-white">
-        <h1
-          class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight"
-        >
-          John Florentino Dunglao
-        </h1>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">John Florentino Dunglao</h1>
         <p class="text-xl md:text-2xl mb-8 text-white/90 font-light">Welcome to my portfolio</p>
         <div class="mb-12">
           <p class="text-lg text-white/80 leading-relaxed">
@@ -57,9 +48,3 @@ onMounted(async () => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.bg-grid-pattern {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-}
-</style>

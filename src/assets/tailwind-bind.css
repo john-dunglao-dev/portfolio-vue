@@ -28,7 +28,7 @@
   --color-comment: #6b7280;
   --color-selection: #dbeafe;
   --color-reserved-word: #b91c1c;
-  --default-font-family: Menlo, Monaco, 'Courier New', monospace;
+  --default-font-family: 'Roboto', sans-serif;
 }
 
 @layer base {
@@ -188,6 +188,10 @@
 
   * {
     list-style-type: none; /* Remove default list styles */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-base);
   }
 
   h1,
@@ -197,9 +201,7 @@
   h5,
   h6 {
     color: var(--color-primary);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.075rem;
+    font-family: 'Lexend Deca', sans-serif;
     line-height: var(--leading-normal);
   }
 
@@ -239,7 +241,7 @@
   button,
   select {
     color: var(--color-foreground);
-    font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-light);
   }
 
   a {

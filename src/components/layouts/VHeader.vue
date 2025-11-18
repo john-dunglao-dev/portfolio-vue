@@ -18,7 +18,7 @@ import ThemeChange from '@/components/layouts/ThemeChange.vue'
       <RouterLink :to="{ name: 'Landing' }">
         <div class="text-lg font-bold flex gap-2 items-center text-primary">
           <MyLogoMini class="h-8 w-auto" />
-          <span>John Florentino Dunglao</span>
+          <h6 class="text-foreground">John Florentino Dunglao</h6>
         </div>
       </RouterLink>
 
