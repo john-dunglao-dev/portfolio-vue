@@ -5,7 +5,7 @@ import ThemeChange from '@/components/layouts/ThemeChange.vue'
 </script>
 
 <template>
-  <header class="bg-comment shadow">
+  <header class="bg-comment/80 shadow">
     <div class="container mx-auto flex h-16 items-center justify-between px-4">
       <!-- TODO: Implement mobile menu -->
       <!-- Mobile menu button -->
