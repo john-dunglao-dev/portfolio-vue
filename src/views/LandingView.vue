@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { nextTick, onMounted, ref } from 'vue'
 import MyLogo from '@/components/icons/MyLogo.vue'
+import Cube from '@/components/graphics/Cube.vue'
+import Pyramid from '@/components/graphics/Pyramid.vue'
 
 const isVisible = ref(false)
 
@@ -11,7 +13,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col justify-center items-center p-8 relative overflow-hidden">
+  <div
+    class="min-[calc(100dvh-(64px+30px))] flex flex-col justify-center items-center p-8 relative overflow-hidden"
+  >
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl w-full items-center z-10 transition-all duration-700 ease-out"
       :class="{
@@ -20,11 +24,11 @@ onMounted(async () => {
       }"
     >
       <div class="text-white">
+        <p class="text-xl md:text-2xl ml-2 text-white/90 font-light">Senior Web Developer</p>
         <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">John Florentino Dunglao</h1>
-        <p class="text-xl md:text-2xl mb-8 text-white/90 font-light">Welcome to my portfolio</p>
         <div class="mb-12">
-          <p class="text-lg text-white/80 leading-relaxed">
-            Full Stack Developer • Problem Solver • Technology Enthusiast
+          <p class="text-lg ml-2 text-white/80 leading-relaxed">
+            Problem Solver • Technology Enthusiast • Gamer
           </p>
         </div>
         <div class="flex gap-4 flex-wrap">
@@ -42,9 +46,59 @@ onMounted(async () => {
           </RouterLink>
         </div>
       </div>
-      <div class="flex justify-center items-center">
-        <MyLogo class="text-primary" />
+      <div class="flex justify-center items-center relative">
+        <!-- <MyLogo class="text-primary" /> -->
+        <div
+          class="w-120 h-120 object-contain overflow-hidden rounded-full border-4 border-white/20 shadow-lg shadow-black/30"
+        >
+          <img
+            src="@/assets/images/me_thinking.jpg"
+            alt="Picture of a man thinking while smiling"
+          />
+        </div>
+
+        <!-- triangle -->
+        <div class="absolute top-1/2 left-1/2 triangle"></div>
+        <!-- circle -->
+        <div class="absolute bottom-[-100px] right-[-100px] circle"></div>
+        <!-- square -->
+        <div class="absolute top-[-75px] left-[75px] square"></div>
+
+        <!-- cube -->
+        <Cube class="absolute top-[50px] right-[50px]" />
+
+        <!-- pyramid -->
+        <Pyramid class="absolute bottom-[50px] left-[50px]" />
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid var(--color-primary);
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  background: var(--color-primary);
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  background: var(--color-primary);
+}
+</style>
