@@ -41,7 +41,7 @@ onMounted(async () => {
 
           <RouterLink
             :to="{ name: 'ContactMe' }"
-            class="px-8 py-4 bg-transparent text-foreground border-2 border-foreground/30 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-white/10 hover:border-white/50 hover:-translate-y-1"
+            class="px-8 py-4 bg-transparent text-foreground border-2 border-foreground/30 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-white/10 hover:border-primary/50 hover:-translate-y-1"
           >
             Get in Touch
           </RouterLink>
@@ -49,7 +49,7 @@ onMounted(async () => {
           <a
             href="@/assets/pdfs/John-Florentino-Dunglao-CV.pdf"
             download
-            class="border rounded-full p-4 text-primary hover:text-foreground transition-all duration-300 ease-in-out"
+            class="border rounded-full p-4 text-primary hover:text-background hover:bg-primary transition-all duration-300 ease-in-out"
           >
             <PhFileArrowDown size="24" />
           </a>

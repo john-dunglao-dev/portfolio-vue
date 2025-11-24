@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import VFooter from '@/components/layouts/VFooter.vue'
 import VHeader from '@/components/layouts/VHeader.vue'
-import FadeTransition from '@/components/transitions/FadeTransition.vue'
 </script>
 
 <template>
@@ -24,7 +23,7 @@ import FadeTransition from '@/components/transitions/FadeTransition.vue'
           <!-- <KeepAlive> -->
           <Suspense timeout="0">
             <template #default>
-              <Component :is="Component" />
+              <Component :is="Component" :key="route.path" />
             </template>
 
             <template #fallback>

@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
+import {
+  Listbox,
+  ListboxLabel,
+  ListboxButton,
+  ListboxOptions,
+  ListboxOption,
+} from '@headlessui/vue'
 import type { PropType } from 'vue'
 import type { Option } from '@/components/form/models/Option'
 import { PhCaretDown } from '@phosphor-icons/vue'
@@ -9,6 +15,14 @@ defineProps({
     type: Array as PropType<Option[]>,
     required: true,
   },
+  label: {
+    type: String,
+    default: '',
+  },
+  placeholder: {
+    type: String,
+    default: 'Select an option',
+  },
 })
 
 const selected = defineModel('selected', {
@@ -17,33 +31,46 @@ const selected = defineModel('selected', {
 </script>
 
 <template>
-  <Listbox v-model="selected">
-    <div class="relative mt-1">
-      <ListboxButton
-        class="relative w-full cursor-default rounded-lg bg-selection py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm"
-      >
-        <span class="block truncate">
-          {{ selected?.label ?? 'Select an option' }}
-        </span>
-        <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-          <PhCaretDown size="16" />
-        </span>
-      </ListboxButton>
-      <ListboxOptions
-        class="absolute mt-1 max-h-60 w-fit max-w-96 overflow-auto rounded-md bg-selection py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-      >
-        <ListboxOption
-          v-for="(option, index) in options"
-          v-slot="{ selected: optionSelected }"
-          :key="`ListboxOption-${index}`"
-          :value="option"
-          class="relative cursor-default select-none py-2 px-4 hover:bg-primary"
+  <div class="w-full">
+    <Listbox v-model="selected" as="div">
+      <ListboxLabel v-if="label" class="block text-sm font-medium text-foreground mb-1">
+        {{ label }}
+      </ListboxLabel>
+
+      <div class="relative">
+        <ListboxButton
+          class="relative w-full cursor-default rounded-lg bg-background py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:text-sm text-foreground"
+          :aria-label="label || 'Select from options'"
         >
-          <span class="block truncate" :class="{ 'font-bold': optionSelected }">
-            {{ option.label }}
+          <span class="block truncate">
+            {{ selected?.label ? `Theme: ${selected.label}` : placeholder }}
           </span>
-        </ListboxOption>
-      </ListboxOptions>
-    </div>
-  </Listbox>
+          <span
+            class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
+            aria-hidden="true"
+          >
+            <PhCaretDown size="16" class="text-comment" />
+          </span>
+        </ListboxButton>
+        <ListboxOptions
+          class="absolute z-10 mt-1 max-h-60 w-full min-w-max overflow-auto rounded-md bg-selection py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+        >
+          <ListboxOption
+            v-for="(option, index) in options"
+            :key="`option-${option.value || index}`"
+            :value="option"
+            class="relative cursor-pointer select-none py-2 px-4 transition-colors text-foreground hover:bg-primary/10 focus:bg-primary focus:text-white"
+            v-slot="{ selected: optionSelected, active }"
+          >
+            <div :class="{ 'bg-primary text-white': active }">
+              <span class="block truncate" :class="{ 'font-semibold': optionSelected }">
+                {{ option.label }}
+              </span>
+              <span v-if="optionSelected" class="sr-only">(selected)</span>
+            </div>
+          </ListboxOption>
+        </ListboxOptions>
+      </div>
+    </Listbox>
+  </div>
 </template>
