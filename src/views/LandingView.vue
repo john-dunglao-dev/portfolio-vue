@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { PhFileArrowDown } from '@phosphor-icons/vue'
+import { differenceInMonths } from 'date-fns'
 import { nextTick, onMounted, ref } from 'vue'
-import MyLogo from '@/components/icons/MyLogo.vue'
-import Cube from '@/components/graphics/Cube.vue'
-import Pyramid from '@/components/graphics/Pyramid.vue'
 
 const isVisible = ref(false)
+const experience = ref<number>(differenceInMonths(new Date(), new Date(2018, 2)) / 12)
 
 onMounted(async () => {
   await nextTick()
@@ -14,7 +14,7 @@ onMounted(async () => {
 
 <template>
   <div
-    class="min-[calc(100dvh-(64px+30px))] flex flex-col justify-center items-center p-8 relative overflow-hidden"
+    class="min-h-[calc(100dvh-(64px+30px))] flex flex-col justify-center items-center p-8 relative overflow-hidden"
   >
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl w-full items-center z-10 transition-all duration-700 ease-out"
@@ -23,11 +23,11 @@ onMounted(async () => {
         'opacity-0 translate-y-8': !isVisible,
       }"
     >
-      <div class="text-white">
-        <p class="text-xl md:text-2xl ml-2 text-white/90 font-light">Senior Web Developer</p>
+      <div>
+        <p class="text-xl md:text-2xl ml-2 text-foreground/90 font-light">Senior Web Developer</p>
         <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">John Florentino Dunglao</h1>
         <div class="mb-12">
-          <p class="text-lg ml-2 text-white/80 leading-relaxed">
+          <p class="text-lg ml-2 text-foreground/80 leading-relaxed">
             Problem Solver • Technology Enthusiast • Gamer
           </p>
         </div>
@@ -38,14 +38,24 @@ onMounted(async () => {
           >
             Know More
           </RouterLink>
+
           <RouterLink
             :to="{ name: 'ContactMe' }"
-            class="px-8 py-4 bg-transparent text-white border-2 border-white/30 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-white/10 hover:border-white/50 hover:-translate-y-1"
+            class="px-8 py-4 bg-transparent text-foreground border-2 border-foreground/30 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 uppercase tracking-wider hover:bg-white/10 hover:border-white/50 hover:-translate-y-1"
           >
             Get in Touch
           </RouterLink>
+
+          <a
+            href="@/assets/pdfs/John-Florentino-Dunglao-CV.pdf"
+            download
+            class="border rounded-full p-4 text-primary hover:text-foreground transition-all duration-300 ease-in-out"
+          >
+            <PhFileArrowDown size="24" />
+          </a>
         </div>
       </div>
+
       <div class="flex justify-center items-center relative">
         <!-- <MyLogo class="text-primary" /> -->
         <div
@@ -56,19 +66,43 @@ onMounted(async () => {
             alt="Picture of a man thinking while smiling"
           />
         </div>
+      </div>
 
-        <!-- triangle -->
-        <div class="absolute top-1/2 left-1/2 triangle"></div>
-        <!-- circle -->
-        <div class="absolute bottom-[-100px] right-[-100px] circle"></div>
-        <!-- square -->
-        <div class="absolute top-[-75px] left-[75px] square"></div>
+      <div class="col-span-2 grid grid-cols-1 md:grid-cols-4 text-center">
+        <div>
+          <div>
+            <h6 class="text-foreground font-bold">
+              {{ Math.trunc(experience) }}<span v-if="experience % 1 !== 0">+</span>
+              years
+            </h6>
 
-        <!-- cube -->
-        <Cube class="absolute top-[50px] right-[50px]" />
+            <p>Experience as a Web Developer</p>
+          </div>
+        </div>
 
-        <!-- pyramid -->
-        <Pyramid class="absolute bottom-[50px] left-[50px]" />
+        <div>
+          <div>
+            <h6 class="text-foreground font-bold">4</h6>
+
+            <p>Junior Developers Mentored</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h6 class="text-foreground font-bold">3 years</h6>
+
+            <p>Frontend Development Experience</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h6 class="text-foreground font-bold">5</h6>
+
+            <p>Technologies & Frameworks Used</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
