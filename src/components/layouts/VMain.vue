@@ -8,7 +8,7 @@ import VHeader from '@/components/layouts/VHeader.vue'
   <div class="bg-background relative">
     <div class="absolute inset-0 opacity-20 bg-grid-pattern z-0"></div>
 
-    <div class="sticky top-0 z-10 relative">
+    <div class="sticky top-0 z-20">
       <VHeader />
     </div>
 
@@ -27,9 +27,7 @@ import VHeader from '@/components/layouts/VHeader.vue'
             </template>
 
             <template #fallback>
-              <div
-                class="w-full h-64 flex justify-center items-center absolute top-0 left-0 z-10 relative"
-              >
+              <div class="w-full h-64 flex justify-center items-center absolute top-0 left-0 z-10">
                 <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
               </div>
             </template>
@@ -40,7 +38,7 @@ import VHeader from '@/components/layouts/VHeader.vue'
       </RouterView>
     </main>
 
-    <div class="sticky bottom-0 z-10 relative">
+    <div class="sticky bottom-0 z-20">
       <VFooter />
     </div>
   </div>
