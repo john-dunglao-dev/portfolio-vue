@@ -62,7 +62,7 @@ const selected = defineModel('selected', {
             class="relative cursor-pointer select-none py-2 px-4 transition-colors text-foreground hover:bg-primary/10 focus:bg-primary focus:text-white"
             v-slot="{ selected: optionSelected, active }"
           >
-            <div :class="{ 'bg-primary text-white': active }">
+            <div>
               <span class="block truncate" :class="{ 'font-semibold': optionSelected }">
                 {{ option.label }}
               </span>
