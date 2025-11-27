@@ -201,6 +201,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
           'I explored Rollup as an alternative module bundler for specific frontend projects that required tree-shaking and optimized bundle sizes. Rollup is known for its efficient bundling of ES modules and is often used for libraries and smaller applications. I found it useful for projects where minimizing bundle size was a priority.',
         icon: frontendIcons[FrontendSkill.Rollup],
       },
+      {
+        title: FrontendSkill.React,
+        description:
+          'This is the newest frontend framework I learned. I tried it now since it is the most in-demand frontend framework in the industry today. React is a popular JavaScript library for building user interfaces. I appreciate its component-based architecture and the ability to create reusable UI components. It has a large ecosystem and community support, which makes it easier to find resources and libraries for various use cases.',
+        icon: frontendIcons[FrontendSkill.React],
+      }
     ],
   },
   {
