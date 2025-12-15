@@ -1,6 +1,7 @@
-import { ListNode } from './models/ListNode'
+import { ListNode } from '@/composables/leet-debug/models/ListNode'
 
 export const use24 = () => {
+  // beats 100%
   const myAnswer = (head: ListNode | null): ListNode | null => {
     if (!head) return null
     if (!head.next) return head
@@ -10,12 +11,16 @@ export const use24 = () => {
 
     while (head) {
       if (head.next) {
-        looper.next = new ListNode(head.next.val, new ListNode(head.val))
+        if (looper) {
+          looper.next = new ListNode(head.next.val, new ListNode(head.val))
+          looper = looper.next.next
+        }
 
         head = head.next.next
-        looper = looper.next.next
       } else if (head) {
-        looper.next = new ListNode(head.val)
+        if (looper) {
+          looper.next = new ListNode(head.val)
+        }
         break
       } else {
         break

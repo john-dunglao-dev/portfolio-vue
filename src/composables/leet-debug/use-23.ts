@@ -29,8 +29,8 @@ export const use23 = () => {
 
       while (i < lists.length && lists.length > 1) {
         if (lists[i]) {
-          if (least === null || least?.[1] > lists[i].val) {
-            least = [i, lists[i].val]
+          if (lists[i] && (least === null || least?.[1] > lists[i]!.val)) {
+            least = [i, lists[i]!.val]
           }
         } else {
           lists.splice(i, 1)
@@ -40,11 +40,11 @@ export const use23 = () => {
         i++
       }
 
-      if (least) {
-        looper.next = new ListNode(lists[least[0]].val)
+      if (least && lists[least[0]]) {
+        looper.next = new ListNode(lists[least[0]]!.val)
         looper = looper.next
 
-        lists[least[0]] = lists[least[0]].next
+        lists[least[0]] = lists[least[0]]!.next
       }
     }
 
@@ -55,9 +55,42 @@ export const use23 = () => {
     return dummy.next
   }
 
+  const anotherMerge = (lists: Array<ListNode | null>): ListNode | null => {
+    const dummy = new ListNode(0)
+    const currentNode: ListNode = dummy
+
+    if (!lists.length) return null
+    if (lists.length === 1) return lists[0]
+
+    while (lists.length > 1) {
+      let i = 0
+
+      while (i < lists.length) {
+        const item = lists[i]
+
+        if (!item) {
+          continue
+        }
+
+        if (!currentNode.next) {
+          currentNode.next = new ListNode(item.val)
+          // } else if (currentNode.next.val > )
+        }
+
+        i++
+      }
+    }
+
+    if (lists[0]) {
+      currentNode.next = lists[0]
+    }
+
+    return dummy.next
+  }
+
   const myAnswer = (lists: Array<ListNode | null>): ListNode | null => {
     return merge(lists)
   }
 
-  return { myAnswer }
+  return { myAnswer, anotherMerge }
 }
