@@ -35,6 +35,8 @@ For generating Vue.js components, please also adhere to the following:
 14. **Use of Composition API**: Prefer the Composition API for better organization and reuse of
 15. **Use of Reusable Components**: Leverage existing reusable components within the project to maintain consistency and reduce redundancy.
 16. **Code Structure**: Check the eslint and prettier configuration files in the project root to ensure code style consistency.
+17. **TypeScript**: Use TypeScript for type safety and better developer experience.
+18. **Imports**: Use absolute imports based on the project's alias configuration for better readability.
 
 For generating Tailwind CSS styles, please also adhere to the following:
 

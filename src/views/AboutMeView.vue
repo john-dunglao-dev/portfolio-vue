@@ -19,9 +19,9 @@ const openModal = (skill: SkillDisplay) => {
 
 <template>
   <div>
-    <h1 class="my-4">About Me</h1>
+    <h1 class="my-4 px-6 lg:px-0">About Me</h1>
 
-    <div class="space-y-2">
+    <div class="space-y-2 px-6 lg:px-0">
       <p>
         A passionate and dedicated software developer with a strong foundation in web development
         and a hardcore gamer. I have experience working with various programming languages and
@@ -43,7 +43,7 @@ const openModal = (skill: SkillDisplay) => {
     <CaptionedBox
       v-for="(group, categoryIndex) in SKILL_CATEGORIES"
       :key="'SkillCategoryGroup' + categoryIndex"
-      class="mt-4"
+      class="mt-4 mx-6 lg:mx-0"
     >
       <template #legend>
         <h5>{{ group.label }}</h5>
@@ -53,13 +53,13 @@ const openModal = (skill: SkillDisplay) => {
         <li v-for="(skill, skillIndex) in group.skills" :key="'SkillItem' + skillIndex">
           <button class="block w-full h-full focus:outline-primary" @click="openModal(skill)">
             <BorderCard
-              class="grid grid-cols-2 md:grid-cols-1 gap-2 place-items-center py-3 h-full"
+              class="grid grid-cols-4 md:grid-cols-1 gap-2 place-items-center py-3 h-full px-3 lg:px-0"
             >
-              <div class="h-10">
+              <div class="h-10 flex items-center">
                 <i :class="skill.icon" class="text-[32px]"></i>
               </div>
 
-              <div class="text-lg text-center">
+              <div class="text-lg text-center col-span-3 lg:col-span-1">
                 <span>{{ skill.title }}</span>
               </div>
             </BorderCard>
