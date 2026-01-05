@@ -46,6 +46,10 @@ const isMobileMenuOpen = ref<boolean>(false)
       <Teleport to="body">
         <!-- Mobile menu panel (to be implemented) -->
         <RightSideModal v-model:open-modal="isMobileMenuOpen">
+          <div class="py-6 border-b flex justify-center mb-6">
+            <MyLogoMini class="h-8 w-auto" aria-hidden="true" />
+          </div>
+
           <NavigationList />
         </RightSideModal>
       </Teleport>

@@ -3,8 +3,8 @@ import ThemeChange from '@/components/layouts/ThemeChange.vue'
 </script>
 
 <template>
-  <nav class="flex items-center flex-col lg:flex-row gap-3">
-    <ul class="flex space-x-1 flex-col lg:flex-row" role="list">
+  <nav class="flex items-center flex-col lg:flex-row gap-4 lg:gap-3">
+    <ul class="flex flex-col lg:flex-row gap-4 lg:gap-1" role="list">
       <li>
         <RouterLink
           :to="{ name: 'Landing' }"
