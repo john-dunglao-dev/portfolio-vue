@@ -42,20 +42,20 @@ const sendMessageToAuthor = () => {
 </script>
 
 <template>
-  <div class="mt-6 outline-none" contenteditable="true">
+  <div class="mt-6 outline-none px-6 lg:px-0" contenteditable="true">
     <div>
       <ElementBox class="mb-6" tag-type="h1" tag-type-classes="text-3xl font-bold">
         <h1 class="my-0 leading-none">Contact Me</h1>
       </ElementBox>
 
-      <ElementBox class="mb-4 flex" tag-type="p">
+      <ElementBox class="mb-4 lg:flex" tag-type="p">
         <p>Feel free to reach out to me through any of the following platforms:</p>
       </ElementBox>
 
       <ElementBox tag-type="ul">
         <ul>
           <li>
-            <ElementBox class="flex" tag-type="li">
+            <ElementBox class="lg:flex" tag-type="li">
               Email:
               <div class="inline-block" contenteditable="false">
                 <ElementBox class="flex" tag-type="a">
@@ -65,10 +65,10 @@ const sendMessageToAuthor = () => {
             </ElementBox>
           </li>
           <li>
-            <ElementBox class="flex" tag-type="li">
+            <ElementBox class="lg:flex" tag-type="li">
               LinkedIn:
               <div class="inline-block" contenteditable="false">
-                <ElementBox class="flex" tag-type="a">
+                <ElementBox class="lg:flex" tag-type="a">
                   <a href="https://www.linkedin.com/in/jfsdunglao">
                     https://www.linkedin.com/in/jfsdunglao
                   </a>
@@ -77,10 +77,10 @@ const sendMessageToAuthor = () => {
             </ElementBox>
           </li>
           <li>
-            <ElementBox class="flex" tag-type="li">
+            <ElementBox class="lg:flex" tag-type="li">
               GitHub:
               <div class="inline-block" contenteditable="false">
-                <ElementBox class="flex" tag-type="a">
+                <ElementBox class="lg:flex" tag-type="a">
                   <a href="https://github.com/john-dunglao-dev">
                     https://github.com/john-dunglao-dev
                   </a>
@@ -96,7 +96,7 @@ const sendMessageToAuthor = () => {
       <p>Or use this form to reach out</p>
     </ElementBox>
 
-    <div>
+    <div class="mb-6">
       <form class="space-y-4" @submit.prevent="sendMessageToAuthor">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
