@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch to Parent
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v4
         with:
+          event-type: submodule_updated
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }}
           repository: john-dunglao-dev/portfolio-docker
-          event-type: submodule_updated
-          client-payload: '{"submodule": "${{ github.repository }}", "sha": "${{ github.sha }}"}'
+          client-payload: '{"sha": "${{ github.sha }}"}'
