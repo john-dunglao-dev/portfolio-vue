@@ -6,13 +6,13 @@ on:
       - main
 
 jobs:
-  repo-update:
+  repo_update:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch to Parent
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }}
           repository: john-dunglao-dev/portfolio-docker
-          event-type: react-submodule-updated
+          event-type: submodule_updated
           client-payload: '{"submodule": "${{ github.repository }}", "sha": "${{ github.sha }}"}'
